@@ -1,11 +1,21 @@
 # Linux Fundamental Commands
 This is beginner's friendly Linux Fundamental Commands.
 
-Disclaimer : Some of the commands might not found or work in recent versions of Linux distro. If anyone wants to run those commands then he/she should have to install that command first.
+Disclaimer : Some of the commands might not found or work in recent versions of Linux distro. If anyone wants to run those
+commands then he/she should have to install that command first.
 
 ------------------------------------------------------------------------------------------------------------------------------
 
 ## Linux Booting Process
+Booting process is when you powered ON your System until you'll get Login GUI interface fully operationals. Having good
+knowledge of each boot process step assists us in troubleshootings.
+
+
+![Screenshot (367)](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/ff67dd63-2b70-445e-a4b1-9f8142944452)
+
+
+ ![Screenshot (368)](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/4422cccf-cc8f-4037-9fa4-d7eaa90efe1d)
+
 
 
 ## CTRL+ALT+T

@@ -5,47 +5,50 @@ Disclaimer : Some of the commands might not found or work in recent versions of 
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-# CTRL+ALT+T
+## Linux Booting Process
+
+
+## CTRL+ALT+T
 
 - shorcuts to open Terminal
 
 ---------------------------------------------------------------------------------------------------------------------------
-# CTRL+D
+## CTRL+D
 
 - Close the terminals
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-time
+## time
 -
 
 -------------------------------------------------------------------------------------------------------------------------
 
-date
+## date
 -
 
 -------------------------------------------------------------------------------------------------------------------------
 
-help (date --help or --h)
+## help (date --help or --h)
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-man ls
+## man ls
 
 -------------------------------------------------------------------------------------------------------------------------
 
-uniq
+## uniq
 
 ---------------------------------------------------------------------------------------------------------------------
 
-hostname
+## hostname
 (kamal@Ubuntu)
 syntax -  hostname
 output - Ubuntu
 
 ---------------------------------------------------------------------------------------------------------
 
-uname
+## uname
 - tells about OS
 Syntax - uname
 output - Linux
@@ -55,39 +58,39 @@ uname -a
 
 ---------------------------------------------------------------------------------------------------------------
 
-host google.com
+## host google.com
 
 ----------------------------------------------------------------------------------------------------------------
 
-bash --version
+## bash --version
 
 --------------------------------------------------------------------------------------------------------------
 
-Cal 2024
+## Cal 2024
 
 ----------------------------------------------
 
-whoami
+## whoami
 
 -------------------------------------------------
 
-pwd
+## pwd
 
 ---------------------------------------------------------
 
-which
+## which
 
 --------------------------------------------------------
 
-ls [la]
+## ls [la]
 
 --------------------------------------------------------
 
-dir
+## dir
 
 ------------------------------------------------------------
 
-ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t)
+## ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t)
 
 -a - all includes hidden files and folder
 -l - long list
@@ -102,42 +105,42 @@ ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t)
 
 --------------------------------------------------------
 
-echo "hello ho" > file1.txt
-echo "hjkl" >> file1.txt
+## echo "hello ho" > file1.txt
+## echo "hjkl" >> file1.txt
 
 ------------------------------------------------------------------------------------
 
-ping google.com (ping ip)
+## ping google.com (ping ip)
 
 --------------------------------------------------------------------------------------------
 
-bc
+## bc
 
 -------------------------------------------------------------------------------------------
 
-touch test2.txt
+## touch test2.txt
 
 touch .test.txt [This creates a hidden file]
 
 --------------------------
 
-file test2.txt
+## file test2.txt
 
 -------------------------------
 
-find *.txt
+## find *.txt
 
 ------------------------------
 
-cat test2.txt
+## cat test2.txt
 
 -------------------------------------
 
-grep "hello" test2.txt
+## grep "hello" test2.txt
 
 -----------------------------------------------
 
-cd hello/ 
+## cd hello/ 
 
 ['/' -> represents the Root directory
 '$' -> represents the Standard or regular Users
@@ -145,67 +148,67 @@ cd hello/
 
 -----------------------------------------------
 
-mkdir hello1/ hello2/
+## mkdir hello1/ hello2/
 
 mkdir .hello/ [This creates a hidden folder]
 
 ------------------------------------------------
 
-cp test1.txt hello1/
+## cp test1.txt hello1/
 
 ----------------------------------------
 
-mv test1.txt hello1/
+## mv test1.txt hello1/
 
 -----------------------------------------------
 
-rm test1.txt
+## rm test1.txt
 
 ------------------------------------------------------------
 
-mv hello1 hell
+## mv hello1 hell
 
 ---------------------------------------------------
 
-rm -Ri hello1/
+## rm -Ri hello1/
 
 ---------------------------------------------------------
 
-rmdir hello1/
+## rmdir hello1/
 
 ------------------------------------------------------------
 
-ln test1.txt testhardlinks
+## ln test1.txt testhardlinks
 
 ----------------------------------------------------------
 
-ln -s test1.txt softlinks
+## ln -s test1.txt softlinks
 
 ---------------------------------------------------------
 
-["directory loop"
+## ["directory loop"
 mkdir a/ then within a/ create b/
 then, within /b 
 ln -s .. c]
 
 ----------------------------------------------------------------
 
-mkdir 'hello love'
+## mkdir 'hello love'
 mkdir my\ cat, mkdir my\ \ cat, 
 mkdir \$\ "dollars"\'\;\&\|
 
 --------------------------------------
 
-gedit test1.txt
-nano test1.txt
+## gedit test1.txt
+## nano test1.txt
 
 ---------------------------------
 
-history [!12]
+## history [!12]
 
 ----------------------------------
 
-less "hell" test1.txt [to view content of the files]
+## less "hell" test1.txt [to view content of the files]
 
 NOTE : opposite of more
 
@@ -215,7 +218,7 @@ NOTE : file perusal filter for crt viewing
 
 --------------------------------
 
-tac test1
+## tac test1
 
 NOTE : in cat, we view the content of file from first to last, however in tac we get content
 from the files from last to first.
@@ -234,11 +237,11 @@ Guten abend!
 
 --------------------------
 
-vim
+## vim
 
 ----------------------
 
-head and tail
+## head and tail
 for((i=1;i<=1000;i++)); do echo $i >> hundreds.txt;done
 for((i=1;i<=1000;i++)); do echo $i >> thousands.txt;done
 head thousand (head -n 20 thousand)
@@ -246,16 +249,16 @@ tail thousand (tail -n 20 thousand)
 
 ---------------------------------------------
 
-wc -l acces.log(wc access.log, wc - W, -C, L hundred)
+## wc -l acces.log(wc access.log, wc - W, -C, L hundred)
 [Line number, Word, characters/byte numbers]
 
 --------------------------------------------
 
-type pwd (type cd)
+## type pwd (type cd)
 
 --------------------------------
 
-whatis cp
+## whatis cp
 
 - display one-line manual page descriptions for respective command.
 
@@ -267,7 +270,7 @@ touch text; mv text numbers;date;cal or mkdir hello && cp file1.txt hello/]
 
 -----------------------------------------------------------------------------
 
-[wildcards
+## [wildcards
 * - macthes any number of characters
 ? - matches single character
 cp n* hello/
@@ -291,7 +294,7 @@ cp [[:digit:]]*[[:alpha:]] dir1/
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ***********
- alias    *
+ ## alias    *
 ***********
 Note -  before making your own command just check whether it is shell builtin or not, if it's builtin then we can't make aliases
 
@@ -318,7 +321,7 @@ alias
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-Absolute VS. Relative Path
+## Absolute VS. Relative Path
 Absolute (Complete path from start to end)
 cd /home/kamal/kamal/this
 Relative (current working directory)
@@ -328,7 +331,7 @@ Note - The command with '/' is Absolute path whereas,without '/' is Relative Pat
 
 ---------------------------------------------------------------------------------------
 
-User in Linux
+## User in Linux
 sudo - Super User Do
 1.Root (Super user) - Full access to the System
 2.Regular (Normal user) - stores all their files in home(~) directory and limited access
@@ -339,7 +342,7 @@ sudo apt install apache3
 
 -------------------------------------------------------------
 
-chmod
+## chmod
 
 -Change mode
 -It changes file modes in bits
@@ -366,7 +369,7 @@ chmode 664 events.txt (rw,rw, r)
 
 ------------------------------------------------------------------------------------------
 
-top
+## top
 
 - display Linux processes
 
@@ -383,14 +386,14 @@ S -
 TIME+ -
 Command - 
 =========================================================================================
-ps
+## ps
  -report a snapshot of the current processes.
 
 
 =========================================================================================
 ------------------------------------------------------------------------------------------
 
-users
+## users
 
 - shows currently log in username
 

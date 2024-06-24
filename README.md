@@ -158,6 +158,12 @@ touch .test.txt [This creates a hidden file]
 
 ## grep "hello" test2.txt
 
+## diff
+
+## passwd
+## info echo
+
+
 -----------------------------------------------
 
 ## cd hello/ 
@@ -175,10 +181,12 @@ mkdir .hello/ [This creates a hidden folder]
 ------------------------------------------------
 
 ## cp test1.txt hello1/
+   - cp -r 
 
 ----------------------------------------
 
 ## mv test1.txt hello1/
+  - mv -i
 
 -----------------------------------------------
 
@@ -425,3 +433,15 @@ Command -
 - shows currently log in username
 
 ---------------------------------------------------------------------------------------------------
+## verifying files using checksum
+## Compress and extract tar and gz
+## install software using apt -get
+
+## Groups and more
+## Setup and Connect SSH server
+  - ssh key authentications
+---------------------------------------------------------------------------------------------------
+## Partitions
+
+
+    

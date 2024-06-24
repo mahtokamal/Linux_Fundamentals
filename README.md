@@ -409,6 +409,13 @@ Command -
 ## ps
  -report a snapshot of the current processes.
 
+ - ps -a
+ - ps -ef
+   it displays the full format listing of processes.
+
+ - kill
+   kill 6760 (6760 is process_id [pid])
+
 
 =========================================================================================
 ------------------------------------------------------------------------------------------

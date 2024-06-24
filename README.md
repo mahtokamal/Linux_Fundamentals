@@ -81,7 +81,11 @@ uname -a
 ## host google.com
 
 ----------------------------------------------------------------------------------------------------------------
+## expr
+- info expr
+- expr 3 + 3
 
+-----------------------------------------------------------------------------------------------------------------
 ## bash --version
 
 --------------------------------------------------------------------------------------------------------------
@@ -99,6 +103,11 @@ uname -a
 ---------------------------------------------------------
 
 ## which
+
+## CTRL + C 
+- exits Programs abnormally or forcily
+## CTRL + D
+- exits the Program normally
 
 --------------------------------------------------------
 
@@ -225,6 +234,8 @@ ln -s .. c]
 mkdir my\ cat, mkdir my\ \ cat, 
 mkdir \$\ "dollars"\'\;\&\|
 
+- Quoting, escaping and filenames using special character including space
+
 --------------------------------------
 
 ## gedit test1.txt
@@ -240,7 +251,7 @@ mkdir \$\ "dollars"\'\;\&\|
 
 NOTE : opposite of more
 
-more t1.txt
+## more t1.txt
 
 NOTE : file perusal filter for crt viewing
 
@@ -442,6 +453,11 @@ Command -
   - ssh key authentications
 ---------------------------------------------------------------------------------------------------
 ## Partitions
+
+## Process 
+- ps ax
+
+## Jobs and kill processes
 
 
     

@@ -10,11 +10,21 @@ commands then he/she should have to install that command first.
 Booting process is when you powered ON your System until you'll get Login GUI interface fully operationals. Having good
 knowledge of each boot process step assists us in troubleshootings.
 
+![image-373](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/10b5f828-7017-4da8-9dea-45e2be97cd25)
 
-![Screenshot (367)](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/ff67dd63-2b70-445e-a4b1-9f8142944452)
+### 1. BIOS - The First Step
+### 2. MBR - Master Boot Record 
+### 3. The Bootloader
+    - Initial RAM Disk
+    - Text-mode Login
+    
+### 4. The Linux Kernel
+### 5. /Sbin/init and Services
+    - Startup Alternatives
+### 6. Systemd Features
 
 
- ![Screenshot (368)](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/4422cccf-cc8f-4037-9fa4-d7eaa90efe1d)
+ 
 
 
 

@@ -160,20 +160,19 @@ uname -a
 
 **-------------------------------------------------------------------------------------------------------------------------------------**
 ## File and Directory
- ### ls
- - list directory contents </br>
- example :ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) </br>
- a - all includes hidden files and folder </br>
- l - long list </br>
- h - human readable format </br>
- t - sort by time </br>
- R - Recursive files of folders </br>
- i - Interactivity </br>
- I - </br>
- v - Verbose </br>
- f - forcefully </br>
- t - sort by time </br>
-
+### ls
+    list directory contents 
+    example :ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) 
+    a - all includes hidden files and folder 
+    l - long list
+    h - human readable format
+    t - sort by time 
+    R - Recursive files of folders 
+    i - Interactivity 
+    I - 
+    v - Verbose 
+    f - forcefully 
+    t - sort by time
 
  ### cd
  ### dir

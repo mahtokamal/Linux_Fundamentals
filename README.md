@@ -17,10 +17,12 @@ knowledge of each boot process step assists us in troubleshootings.
 
 ![image-150](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/8ff4128b-1613-4109-a644-b91ea890c54d)
 ### Linux 4 stage Booting Process
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| System Startup      | Boot Loader | Kernel Stage      | init stage process |
+| ----------- | ----------- | ----------- | ----------- |
+| Header      | Title       | Header      | Title       |
+| Paragraph   | Text        | Header      | Title       |
+| Header      | Title       | Header      | Title       |
+| Paragraph   | Text        | Header      | Title       |
 
 ### 1. BIOS - The First Step
 ### 2. MBR - Master Boot Record 

@@ -25,7 +25,9 @@ knowledge of each boot process step assists us in troubleshootings.
 | Locate or find bootdevice   | Kernel image and Inital RAM disk(initrd) or file system(initramfs)        | Temporary Root FS (initramfs) into RAM | Login Screen       |
 
 ### 1. System startup
-When powered ON BIOS/UEFI firmware first run POST program(Power ON Self Test) to check H/W integrity to ensure all connected H/W device or components connected to the system are working properly or not. If Post runs without having critical errors or H/w failures then control goes to BIOS/UEFI, if not then it gives us error messages(code) or audible beeps(beep code) depending upon the failures. 
+When powered ON BIOS/UEFI firmware first run POST program(Power ON Self Test) to check H/W integrity to ensure all connected H/W device or components connected to the system are working properly or not. If Post runs without having critical errors or H/w failures then control goes to BIOS/UEFI, if not then it gives us error messages(code) or a series of audible beeps(beep code) depending upon the errors.
+POST checking examples :- CPU, RAM(memory), Sotrage devices(HDD,SSD,Flash drive,), graphics card, peripheral (Keyboard, Mouse).
+
 ### 2. Bootloader stage
 ### 3. The Kernel Stage
     - Initial RAM Disk

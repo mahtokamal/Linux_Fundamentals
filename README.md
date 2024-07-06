@@ -25,7 +25,7 @@ knowledge of each boot process step assists us in troubleshootings.
 | Locate or find bootdevice   | Kernel image and Inital RAM disk(initrd) or file system(initramfs)        | Temporary Root FS (initramfs) into RAM | Login Screen       |
 
 ### 1. System startup
-### 2.Bootloader stage
+### 2. Bootloader stage
 ### 3. The Kernel Stage
     - Initial RAM Disk
     - Text-mode Login

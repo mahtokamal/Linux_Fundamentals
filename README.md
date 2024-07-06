@@ -17,26 +17,21 @@ knowledge of each boot process step assists us in troubleshootings.
 
 ![image-150](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/8ff4128b-1613-4109-a644-b91ea890c54d)
 ### Linux 4 stage Booting Process
-| System Startup      | Boot Loader | Kernel Stage      | init stage process |
-| -----------         | ----------- | ----------- | ----------- |
+| System Startup      | BootLoader stage | Kernel Stage      | init stage process |
+| ---------------         | ----------- | ----------- | ----------- |
 |Power ON             | Boot Device (Boot sector (BIOS/MBR) or .EFI partition file(UEFI/GUID Partition Table (GPT)) | Loading Kernel   | Systemd replaces init by modern OS)|
 | BIOS / UEFI         | Bootloader (GRUB2) Present Boot Menu screen (Select OS & respective Kernel) | Initialize System Resource & H/w ,Decompressing Kernel image | System daemons      |
 | POST (H/W Integrity tests)| Linux Booting, bootloaders(GRUB) Loads(Kernel image)|Kernel Loads & mounts the initrd or initramfs| Start (Background) Services or Process|
 | Locate or find bootdevice   | Kernel image and Inital RAM disk(initrd) or file system(initramfs)        | Temporary Root FS (initramfs) into RAM | Login Screen       |
 
-### 1. BIOS - The First Step
-### 2. MBR - Master Boot Record 
-### 3. The Bootloader
+### 1. System startup
+### 2.Bootloader stage
+### 3. The Kernel Stage
     - Initial RAM Disk
     - Text-mode Login
+### 4. init stage process (systemd)
     
-### 4. The Linux Kernel
-### 5. /Sbin/init and Services
-    - Startup Alternatives
-### 6. Systemd Features
 
-
- 
 
 
 **-------------------------------------------------------------------------------------------------------------------------------------**

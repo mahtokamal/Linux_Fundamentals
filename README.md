@@ -94,9 +94,9 @@ systemd, in particular, introduces parallel initialization, meaning that multipl
 One thing to note is that **/sbin/init** now just points to **/lib/systemd/systemd;** i.e. **systemd** takes over the **init** process.
 One systemd command (systemctl) is used for most basic tasks.
 
-- Starting, stopping, restarting a service (using **httpd**, the Apache web server, as an example) on a currently running system:
+- Starting, stopping, restarting a service (using **httpd**, the Apache web server, as an example) on a currently running system:<br>
 **$ sudo systemctl start|stop|restart httpd.service**
-- Enabling or disabling a system service from starting up at system boot:
+- Enabling or disabling a system service from starting up at system boot:<br>
 **$ sudo systemctl enable|disable httpd.service**
 
 Examples of system daemons include:

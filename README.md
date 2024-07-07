@@ -28,8 +28,32 @@ knowledge of each boot process step assists us in troubleshootings.
 When powered ON BIOS/UEFI firmware first run POST program(Power ON Self Test) to check H/W integrity to ensure all connected H/W device or components connected to the system are working properly or not. If Post runs without having critical errors or H/w failures then control goes to BIOS/UEFI, if not then it gives us error messages(code) or a series of audible beeps(beep code) depending upon the errors.
 
 POST checking examples :- CPU, RAM(memory), Sotrage devices(HDD,SSD,Flash drive,), graphics card, peripheral (Keyboard, Mouse).
+The BIOS software is stored on a ROM chip on the motherboard.
+
+After POST successfully completed, BIOS/UEFI looks for bootable device(HDD,SDD,USB,CD-ROM,DVD,Network interfaces) on the system which stores OS(e.g. Linux) using a predetermined boot order(boot priority) that was previously set in the BIOS settings.
+
+Once the boot device has been identified, the BIOS proceeds to search for either the Master Boot Record (MBR) or the GUID Partition Table (GPT) on the storage device. These contain the crucial initial boot loader code. The boot loader is usually stored on one of the hard disks in the system, either in the boot sector (for traditional BIOS/MBR systems) or the EFI partition (for more recent (Unified) Extensible Firmware Interface or EFI/UEFI systems).Thereafter, information on date, time, and the most important peripherals are loaded from the CMOS values (after a technology used for the battery-powered memory store which allows the system to keep track of the date and time even when it is powered off).
 
 ### 2. Bootloader stage
+In bootloader stage, after detecting boot device it finds the boot sector on storage device on which OS is avaible. It searches first-stage bootloader(primary) and the first stage(first-sector) bootloader, which is a part of the MBR, is a 512-byte image containing the vendor-specific program code and a partition table. The first stage bootloader will find and load the second stage(secondary) bootloader. It does this by searching in the partition table for an active partition. After finding an active partition, first stage bootloader will keep scanning the remaining partitions in the table to ensure that they're all inactive. After this step, the active partition's boot record is read into RAM and executed as the second stage bootloader. The job of the second stage bootloader is to load the Linux kernel image into memory, and optional initial RAM disk.
+
+(GRUB2) GRUB stands for Grand Unified Boot Loader. It's a widely used boot loader in the Linux world, responsible for managing the boot process of a computer.
+GRUB2 shows a menu where you can choose between different Linux kernels or even another operating system like Windows.
+A boot loader is a program that loads the operating system into the computer's memory during the startup process. GRUB is specifically designed for Unix-like operating systems, especially Linux.
+When booting Linux, the boot loader(GRUB2) is responsible for loading the kernel image and the initial RAM disk or filesystem (which contains some critical files and device drivers needed to start the system) into memory(RAM).It also manages the initial RAM disk (initrd/initramfs) that assists the kernel during the boot process.
+
+Besides GRUB there are popular bootloaders:
+- systemd-boot (formerly Gummiboot)
+- SYSLINUX/ISOLINUX
+- Das U-Boot (for embedded devices/appliances)
+- coreboot
+- rEFInd
+
+Historical bootloaders, no longer in common use, include:
+- LILO
+- GRUB1
+- loadlin
+
 ### 3. The Kernel Stage
     - Initial RAM Disk
     - Text-mode Login

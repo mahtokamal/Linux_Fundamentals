@@ -42,6 +42,8 @@ GRUB2 shows a menu where you can choose between different Linux kernels or even 
 A boot loader is a program that loads the operating system into the computer's memory during the startup process. GRUB is specifically designed for Unix-like operating systems, especially Linux.
 When booting Linux, the boot loader(GRUB2) is responsible for loading the kernel image and the initial RAM disk or filesystem (which contains some critical files and device drivers needed to start the system) into memory(RAM).It also manages the initial RAM disk (initrd/initramfs) that assists the kernel during the boot process.
 
+During the installation of Linux distributions, GRUB is usually installed in the Master Boot Record (MBR) of the hard drive or the EFI system partition (for systems using UEFI). This allows GRUB to take control during boot-up and present its menu interface.
+
 Besides GRUB there are popular bootloaders:
 - systemd-boot (formerly Gummiboot)
 - SYSLINUX/ISOLINUX
@@ -56,38 +58,57 @@ Historical bootloaders, no longer in common use, include:
 
 ### 3. The Kernel Stage
 The kernel is the core of the operating system, managing hardware resources, providing abstractions, and controlling interactions between hardware and software.
-Kernel initializes system resources and hardware. The kernel uses information provided by the initrd to mount the actual root file system (for example, ext4, XFS) specified in the boot parameters.
-The boot loader loads both the kernel and an initial RAM–based file system (initramfs) into memory, so it can be used directly by the kernel.
-The Linux kernel handles all operating system processes, such as memory management, task scheduling, I/O, interprocess communication, and overall system control. This is loaded in two stages – in the first stage, the kernel (as a compressed image file) is loaded into memory and decompressed, and a few fundamental functions are set up such as basic memory management, minimal amount of hardware setup. It's worth noting that kernel image is self-decompressed, which is a part of the kernel image's routine. For some platforms (like ARM 64-bit), kernel decompression has to be performed by the bootloader instead, like U-Boot.
+Kernel initializes system resources and hardware. The kernel uses information provided by the **initrd(initial RAM Disk)** to mount the actual root file system **(rootfs)** (for example, ext4, XFS) specified in the boot parameters. The kernel replaces the **temporary root filesystem(initrd or initramfs) also known as early user space** with the **actual root filesystem(rootfs)** on the hard drive.
+
+The boot loader loads both the kernel and an **initial RAM–based file system (initramfs)** into memory, so it can be used directly by the kernel.
+The Linux kernel handles all operating system processes, such as memory management, task scheduling, I/O, interprocess communication, and overall system control. This is loaded in two stages – in the first stage, the kernel (as a compressed image file) is loaded into memory and decompressed, and a few fundamental functions are set up such as basic memory management, minimal amount of hardware setup. It's worth noting that **kernel image is self-decompressed**, which is a part of the kernel image's routine. For some platforms (like ARM 64-bit), kernel decompression has to be performed by the bootloader instead, like U-Boot.During boot-up, the boot loader (such as GRUB) loads the Linux kernel into memory. The kernel then decompresses itself and, if configured to use an initrd, loads the initrd image as a temporary root file system into a predetermined memory location.
 
 After the initrd image completes its tasks, the kernel takes control. It initializes the system hardware, mounts the root file system, and begins the user-space initialization process. An Initial RAM Disk (initrd), also known as an Initial RAM filesystem (initramfs), is a temporary file system loaded into memory during the boot process of a computer before the main operating system takes over. It's an essential component in modern Linux booting.
 
-The primary purpose of the initrd is to provide a minimal set of tools, drivers, and utilities necessary to mount the root file system. It contains essential drivers for storage controllers, file systems, and other hardware components that the kernel might need to access the actual root file system. After the kernel initializes and detects hardware, the initrd's job is largely complete. It hands control over to the main kernel, which then unmounts the initrd and mounts the actual root file system (specified by the bootloader or kernel parameters).
-
-During boot-up, the boot loader (such as GRUB) loads the Linux kernel into memory. The kernel then decompresses itself and, if configured to use an initrd, loads the initrd image as a temporary root file system into a predetermined memory location.
+The primary purpose of the initrd is to provide a minimal set of tools, drivers, and utilities necessary to mount the root file system**(rootfs)**. It contains essential drivers for storage controllers, file systems, and other hardware components that the kernel might need to access the actual root file system. After the kernel initializes and detects hardware, the **initrd's** job is largely complete. It hands control over to the main kernel, which then unmounts the **initrd** and mounts the actual root file 
+system **(rootfs)** (specified by the bootloader or kernel parameters).
 
 Traditionally, initrd was used, but modern systems often use initramfs (a more flexible successor). Initramfs is a cpio archive that is uncompressed into a RAM disk at boot time. It's more versatile, allowing for a more modular approach to including essential files and drivers.
 
-### 4. init stage process (systemd)
-The init process, whether traditional init or systemd, is responsible for starting system services and daemons. These services provide essential functionality to the operating system, such as networking, logging, and hardware-related services. Historically this was the "SysV init", which was just called "init". More recent Linux distributions are likely to use one of the more modern alternatives such as systemd.
 
-The init system is the first daemon to start (during booting) and the last daemon to terminate (during shutdown).During the boot process, the init or systemd process is responsible for starting system daemons. These daemons are configured to launch automatically at specific runlevels (in the case of traditional init) or as defined in systemd unit files.
+The Root File System (rootfs) is a critical component in the booting process of an operating system. It is the top-level directory hierarchy of the file system and contains essential system files and directories.
+
+In the context of the booting process, the root file system is the initial file system that the operating system kernel mounts during the boot sequence.
+The root file system is the starting point for the entire file system hierarchy. It is mounted by the kernel during the boot process, and all other file systems are mounted as subdirectories of the root file system.
+
+The bootloader, such as GRUB in many Linux systems, is configured to specify the location of the root file system. This information is crucial for the kernel to know where to find the core files and directories needed to start the operating system.
+
+The **root file system(rootfs)** contains critical directories such as /bin, /etc, /sbin, and /lib. These directories house essential binaries, configuration files, system libraries, and scripts required for system operation. The root file system can be of different types, such as ext4, XFS, or other supported file systems. The choice of the file system type depends on the system administrator's preferences and requirements.
+The stability and functionality of the operating system depend on the successful initialization and mounting of the root file system. It provides the foundation for the entire operating system environment.
+
+### 4. init stage process (systemd)
+The init process, whether traditional init or systemd, is responsible for starting system services and daemons. These services provide essential functionality to the operating system, such as networking, logging, and hardware-related services. Historically this was the "SysV init", which was just called "init". SysVinit viewed things as a serial process, divided into a series of sequential stages. Each stage required completion before the next could proceed.
+More recent Linux distributions are likely to use one of the more modern alternatives such as systemd.
+
+The init system is the first daemon to start (during booting) and the last daemon to terminate (during shutdown).During the boot process, the init or systemd process is responsible for starting system daemons. These daemons are configured to launch automatically at specific runlevels (in the case of traditional init) or as defined in systemd unit files. In a standard Linux system, init is executed with a parameter, known as a runlevel, which takes a value from 0 to 6 and determines which subsystems are made operational. Each runlevel has its own scripts which codify the various processes involved in setting up or leaving the given runlevel, and it is these scripts which are referenced as necessary in the boot process. Init scripts are typically held in directories with names such as "/etc/rc...".
 
 A daemon is a background process that runs independently of user interaction. Daemons perform specific tasks, such as managing hardware, handling system events, or providing network services.
 
-During the boot process, the init or systemd process is responsible for starting system daemons. These daemons are configured to launch automatically at specific runlevels (in the case of traditional init) or as defined in systemd unit files.
-
-In a standard Linux system, init is executed with a parameter, known as a runlevel, which takes a value from 0 to 6 and determines which subsystems are made operational. Each runlevel has its own scripts which codify the various processes involved in setting up or leaving the given runlevel, and it is these scripts which are referenced as necessary in the boot process. Init scripts are typically held in directories with names such as "/etc/rc...".
-
 systemd, in particular, introduces parallel initialization, meaning that multiple daemons and services can be started simultaneously, improving boot times by taking advantage of modern multi-core systems.
+
+One thing to note is that **/sbin/init** now just points to **/lib/systemd/systemd;** i.e. **systemd** takes over the **init** process.
+One systemd command (systemctl) is used for most basic tasks.
+
+- Starting, stopping, restarting a service (using **httpd**, the Apache web server, as an example) on a currently running system:
+**$ sudo systemctl start|stop|restart httpd.service**
+- Enabling or disabling a system service from starting up at system boot:
+**$ sudo systemctl enable|disable httpd.service**
 
 Examples of system daemons include:
 
-- Network services: Daemons like sshd for secure shell access, httpd for web services, and dhcpd for dynamic host configuration protocol.
-- Logging services: rsyslogd or syslog-ng for handling system logs.
-- Time synchronization: ntpd for Network Time Protocol (NTP) synchronization.
-- Printing services: cupsd for Common Unix Printing System.
-- Hardware management: udev for device management and acpid for Advanced Configuration and Power Interface events.
+- **Network services:** Daemons like sshd for secure shell access, httpd for web services, and dhcpd for dynamic host configuration protocol.
+- **Logging services:** rsyslogd or syslog-ng for handling system logs.
+- **cron** (task scheduler)
+- **Time synchronization:** ntpd for Network Time Protocol (NTP) synchronization.
+- **Printing services:** cupsd for Common Unix Printing System.
+- **Hardware management:** udev for device management and acpid for Advanced Configuration and Power Interface events.
+
+Once system daemons are initialized, the system is ready to handle user interactions. For example, network services are available, and users can log in or access various system resources.
 
 
 

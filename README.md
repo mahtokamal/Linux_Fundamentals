@@ -32,15 +32,37 @@ The BIOS software is stored on a ROM chip on the motherboard.
 
 After POST successfully completed, BIOS/UEFI looks for bootable device(HDD,SDD,USB,CD-ROM,DVD,Network interfaces) on the system which stores OS(e.g. Linux) using a predetermined boot order(boot priority) that was previously set in the BIOS settings.
 
-Once the boot device has been identified, the BIOS proceeds to search for either the Master Boot Record (MBR) or the GUID Partition Table (GPT) on the storage device. These contain the crucial initial boot loader code. The boot loader is usually stored on one of the hard disks in the system, either in the boot sector (for traditional BIOS/MBR systems) or the EFI partition (for more recent (Unified) Extensible Firmware Interface or EFI/UEFI systems).Thereafter, information on date, time, and the most important peripherals are loaded from the CMOS values (after a technology used for the battery-powered memory store which allows the system to keep track of the date and time even when it is powered off).
+**BIOS/UEFI Firmware**
+BIOS and UEFI are two essential firmware interfaces responsible for initializing hardware components, running system diagnostics, and supporting the startup of the operating system on a computer. These interfaces are vital players in the boot process of a system.
+
+**BIOS**
+For decades, BIOS has been a dominant firmware interface, stored on the motherboard's chip. Its crucial role is to activate and oversee hardware during the boot-up phase.
+
+Once the boot device has been identified, the BIOS proceeds to search for either the Master Boot Record (MBR) or the GUID Partition Table (GPT) on the storage device. These contain the crucial initial boot loader code. The BIOS then dutifully passes the reins to the designated boot loader, such as GRUB for Linux operating systems. The boot loader is usually stored on one of the hard disks in the system, either in the boot sector (for traditional BIOS/MBR systems) or the EFI partition (for more recent (Unified) Extensible Firmware Interface or EFI/UEFI systems).Thereafter, information on date, time, and the most important peripherals are loaded from the CMOS values (after a technology used for the battery-powered memory store which allows the system to keep track of the date and time even when it is powered off).
+
+**UEFI (Unified Extensible Firmware Interface)**
+UEFI is a more modern and versatile replacement for BIOS. It provides more advanced features and capabilities than BIOS.
+
+UEFI is firmware that resides on the motherboard and is responsible for initializing hardware and booting the operating system. Similar to BIOS, UEFI starts with the hardware initialization and system checks. But UEFI supports more modern hardware standards and allows for faster boot times compared to traditional BIOS.
+
+UEFI includes a boot manager, which is more sophisticated than the boot loaders used in BIOS systems. It understands different file systems, allowing the system to boot from drives formatted with newer file systems like GPT. It uses EFI boot partitions to store bootloaders and related information.
+
+UEFI introduced Secure Boot, a security feature that verifies the digital signatures of boot loaders and operating system kernels during the boot process. This helps prevent the loading of unauthorized or malicious code during boot time.
+
+**BIOS vs UEFI**
+- BIOS uses the Master Boot Record (MBR) method, while UEFI uses the GUID Partition Table (GPT) method.
+- UEFI is more flexible and supports larger storage capacities, modern hardware, and faster boot times compared to BIOS.
+- UEFI introduces Secure Boot, enhancing system security by verifying the authenticity of bootloader and OS components.
 
 ### 2. Bootloader stage
 In bootloader stage, after detecting boot device it finds the boot sector on storage device on which OS is avaible. It searches first-stage bootloader(primary) and the first stage(first-sector) bootloader, which is a part of the MBR, is a 512-byte image containing the vendor-specific program code and a partition table. The first stage bootloader will find and load the second stage(secondary) bootloader. It does this by searching in the partition table for an active partition. After finding an active partition, first stage bootloader will keep scanning the remaining partitions in the table to ensure that they're all inactive. After this step, the active partition's boot record is read into RAM and executed as the second stage bootloader. The job of the second stage bootloader is to load the Linux kernel image into memory, and optional initial RAM disk.
 
-(GRUB2) GRUB stands for Grand Unified Boot Loader. It's a widely used boot loader in the Linux world, responsible for managing the boot process of a computer.
+**(GRUB2) GRUB** stands for **Grand Unified Boot Loader**. It's a widely used boot loader in the Linux world, responsible for managing the boot process of a computer.
 GRUB2 shows a menu where you can choose between different Linux kernels or even another operating system like Windows.
 A boot loader is a program that loads the operating system into the computer's memory during the startup process. GRUB is specifically designed for Unix-like operating systems, especially Linux.
 When booting Linux, the boot loader(GRUB2) is responsible for loading the kernel image and the initial RAM disk or filesystem (which contains some critical files and device drivers needed to start the system) into memory(RAM).It also manages the initial RAM disk (initrd/initramfs) that assists the kernel during the boot process.
+
+GRUB uses a configuration file (grub.cfg or menu.lst) where users can define boot options, specify kernel parameters, and customize the appearance of the boot menu. This allows users to modify boot settings or add specific parameters for the operating system to use during startup.
 
 During the installation of Linux distributions, GRUB is usually installed in the Master Boot Record (MBR) of the hard drive or the EFI system partition (for systems using UEFI). This allows GRUB to take control during boot-up and present its menu interface.
 
@@ -56,6 +78,67 @@ Historical bootloaders, no longer in common use, include:
 - GRUB1
 - loadlin
 
+**MBR (Master Boot Record)**
+The Master Boot Record (MBR) plays a vital role in the storage structure of a disk. It is closely linked to BIOS-based systems and serves as the catalyst for the initial booting process.
+
+**Structure of MBR**
+The MBR is located in the first sector of a storage device (usually the first 512 bytes of a hard drive or SSD). It's in a fixed location, the LBA (Logical Block Address) 0.
+
+The Master Boot Record (MBR) if of  512 bytes in size. It consists of three components:
+![image--1--1](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/ea3d83c6-c9e9-4c91-8973-03480743a153)
+
+MBR Structure: Boot signature, partitions, and bootstrap code
+1. The primary boot loader information occupies the initial 446 bytes.
+2. Following that, the partition table information fills the subsequent 64 bytes.
+3. Lastly, the MBR validation check, also known as the magic number, resides in the final 2 bytes.
+
+A partition table is a small database that holds information about the disk's partitions. This table can store information for up to four primary partitions or three primary partitions and one extended partition.
+
+Each entry in the partition table consists of
+
+1. Starting and ending addresses of each partition.
+2. Partition type (such as FAT, NTFS, Linux filesystem, and so on).
+3. Bootable flag indicating which partition is the active/bootable partition.
+
+**Function of MBR**
+The MBR boot code's primary function is to locate and load the active/bootable partition's boot loader. It reads the partition table to identify which partition holds the bootable flag and executes the boot loader code from that partition.
+
+The boot loader (for example, GRUB) subsequently takes over and presents a boot menu if configured, allowing the user to choose an operating system to load. It then loads the selected OS's kernel and initiates its booting process.
+
+**Limitations of MBR**
+MBR has limitations in supporting only four primary partitions or three primary partitions and one extended partition, which can further contain multiple logical partitions. This restricts the number of partitions usable on a disk.
+
+MBR uses 32-bit addressing, limiting disk sizes to 2 terabytes (TB). Larger disks cannot be fully utilized under MBR due to this limitation.
+
+It also lacks built-in security features, making it susceptible to boot sector viruses or malicious code overwriting the boot loader.
+
+**GPT (GUID Partition Table)**
+The GUID Partition Table (GPT) is a partitioning scheme used on modern storage devices and is closely associated with UEFI-based systems. It replaced the older Master Boot Record (MBR) partitioning scheme due to its numerous advantages and capabilities, especially in conjunction with UEFI firmware.
+
+**Structure of GPT**
+GPT is a partitioning scheme that defines the layout of partitions on a storage device. Unlike MBR, which has limitations regarding disk size and partition count, GPT offers more flexibility and scalability.
+
+Each partition in a GPT disk is identified by a unique GUID (Globally Unique Identifier). This allows for up to 128 partitions per disk (though practical limitations might apply based on the operating system and system firmware).
+
+GPT disks contain a Protective MBR to maintain compatibility with legacy systems that may not recognize GPT partitions. This Protective MBR tells older systems that the disk is in use and prevents them from overwriting or modifying the GPT partitions.
+
+GPT stores partition entries in a table located at the beginning and end of the disk. This redundancy enhances data integrity and provides backup information about the partition layout.
+
+![image-33](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/3cb9c1ea-dc34-4523-b6f8-6f0dc4f0ce89)
+
+GUID partition table scheme diagram
+
+**Function of GPT**
+UEFI requires a specific partition known as the UEFI System Partition (ESP), which is a primary component of the GPT scheme. The ESP contains bootloaders, firmware executables, and other necessary files for the boot process.
+
+UEFI firmware uses information stored in the GPT to locate the UEFI boot loader. The boot loader is stored in the ESP and is specified in the firmware's boot configuration data.
+
+UEFI firmware understands GPT and can read the partition information directly from the GPT header. It uses this information to identify the bootable partition and load the UEFI boot loader from the ESP.
+
+GPT and UEFI work together to support Secure Boot functionality. Secure Boot uses information from GPT to verify the digital signatures of bootloaders and OS components, ensuring a secure boot process.
+
+GPT supports disk sizes larger than 2TB, addressing the limitations of the MBR partitioning scheme. It efficiently manages partitions on larger disks and provides scalability for future storage needs.
+
 ### 3. The Kernel Stage
 The kernel is the core of the operating system, managing hardware resources, providing abstractions, and controlling interactions between hardware and software.
 Kernel initializes system resources and hardware. The kernel uses information provided by the **initrd(initial RAM Disk)** to mount the actual root file system **(rootfs)** (for example, ext4, XFS) specified in the boot parameters. The kernel replaces the **temporary root filesystem(initrd or initramfs) also known as early user space** with the **actual root filesystem(rootfs)** on the hard drive.
@@ -65,12 +148,13 @@ The Linux kernel handles all operating system processes, such as memory manageme
 
 After the initrd image completes its tasks, the kernel takes control. It initializes the system hardware, mounts the root file system, and begins the user-space initialization process. An Initial RAM Disk (initrd), also known as an Initial RAM filesystem (initramfs), is a temporary file system loaded into memory during the boot process of a computer before the main operating system takes over. It's an essential component in modern Linux booting.
 
+**Initrd (Initial RAM Disk) Image**
 The primary purpose of the initrd is to provide a minimal set of tools, drivers, and utilities necessary to mount the root file system**(rootfs)**. It contains essential drivers for storage controllers, file systems, and other hardware components that the kernel might need to access the actual root file system. After the kernel initializes and detects hardware, the **initrd's** job is largely complete. It hands control over to the main kernel, which then unmounts the **initrd** and mounts the actual root file 
 system **(rootfs)** (specified by the bootloader or kernel parameters).
 
 Traditionally, initrd was used, but modern systems often use initramfs (a more flexible successor). Initramfs is a cpio archive that is uncompressed into a RAM disk at boot time. It's more versatile, allowing for a more modular approach to including essential files and drivers.
 
-
+**RootFS**
 The Root File System (rootfs) is a critical component in the booting process of an operating system. It is the top-level directory hierarchy of the file system and contains essential system files and directories.
 
 In the context of the booting process, the root file system is the initial file system that the operating system kernel mounts during the boot sequence.

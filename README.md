@@ -32,15 +32,18 @@ The BIOS software is stored on a ROM chip on the motherboard.
 
 After POST successfully completed, BIOS/UEFI looks for bootable device(HDD,SDD,USB,CD-ROM,DVD,Network interfaces) on the system which stores OS(e.g. Linux) using a predetermined boot order(boot priority) that was previously set in the BIOS settings.
 
-**BIOS/UEFI Firmware**
+![LFS01_ch03_screen16](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/779d66d2-9a73-4157-8277-9f6443db569c)
+
+
+**BIOS/UEFI Firmware**<br>
 BIOS and UEFI are two essential firmware interfaces responsible for initializing hardware components, running system diagnostics, and supporting the startup of the operating system on a computer. These interfaces are vital players in the boot process of a system.
 
-**BIOS**
+**BIOS**<br>
 For decades, BIOS has been a dominant firmware interface, stored on the motherboard's chip. Its crucial role is to activate and oversee hardware during the boot-up phase.
 
 Once the boot device has been identified, the BIOS proceeds to search for either the Master Boot Record (MBR) or the GUID Partition Table (GPT) on the storage device. These contain the crucial initial boot loader code. The BIOS then dutifully passes the reins to the designated boot loader, such as GRUB for Linux operating systems. The boot loader is usually stored on one of the hard disks in the system, either in the boot sector (for traditional BIOS/MBR systems) or the EFI partition (for more recent (Unified) Extensible Firmware Interface or EFI/UEFI systems).Thereafter, information on date, time, and the most important peripherals are loaded from the CMOS values (after a technology used for the battery-powered memory store which allows the system to keep track of the date and time even when it is powered off).
 
-**UEFI (Unified Extensible Firmware Interface)**
+**UEFI (Unified Extensible Firmware Interface)**<br>
 UEFI is a more modern and versatile replacement for BIOS. It provides more advanced features and capabilities than BIOS.
 
 UEFI is firmware that resides on the motherboard and is responsible for initializing hardware and booting the operating system. Similar to BIOS, UEFI starts with the hardware initialization and system checks. But UEFI supports more modern hardware standards and allows for faster boot times compared to traditional BIOS.
@@ -49,7 +52,7 @@ UEFI includes a boot manager, which is more sophisticated than the boot loaders 
 
 UEFI introduced Secure Boot, a security feature that verifies the digital signatures of boot loaders and operating system kernels during the boot process. This helps prevent the loading of unauthorized or malicious code during boot time.
 
-**BIOS vs UEFI**
+**BIOS vs UEFI**<br>
 - BIOS uses the Master Boot Record (MBR) method, while UEFI uses the GUID Partition Table (GPT) method.
 - UEFI is more flexible and supports larger storage capacities, modern hardware, and faster boot times compared to BIOS.
 - UEFI introduces Secure Boot, enhancing system security by verifying the authenticity of bootloader and OS components.
@@ -81,10 +84,15 @@ Historical bootloaders, no longer in common use, include:
 **MBR (Master Boot Record)**
 The Master Boot Record (MBR) plays a vital role in the storage structure of a disk. It is closely linked to BIOS-based systems and serves as the catalyst for the initial booting process.
 
-**Structure of MBR**
-The MBR is located in the first sector of a storage device (usually the first 512 bytes of a hard drive or SSD). It's in a fixed location, the LBA (Logical Block Address) 0.
+![LFS01_ch03_screen20](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/5d4d421b-3537-4f30-9c39-26f9ed88f512)
 
+![LFS01_ch03_screen18](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/a60cd83b-6aaf-45e8-8d4c-66a965dc17d4)
+
+
+**Structure of MBR**<br>
+The MBR is located in the first sector of a storage device (usually the first 512 bytes of a hard drive or SSD). It's in a fixed location, the LBA (Logical Block Address) 0.
 The Master Boot Record (MBR) if of  512 bytes in size. It consists of three components:
+
 ![image--1--1](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/ea3d83c6-c9e9-4c91-8973-03480743a153)
 
 MBR Structure: Boot signature, partitions, and bootstrap code
@@ -100,22 +108,22 @@ Each entry in the partition table consists of
 2. Partition type (such as FAT, NTFS, Linux filesystem, and so on).
 3. Bootable flag indicating which partition is the active/bootable partition.
 
-**Function of MBR**
+**Function of MBR**<br>
 The MBR boot code's primary function is to locate and load the active/bootable partition's boot loader. It reads the partition table to identify which partition holds the bootable flag and executes the boot loader code from that partition.
 
 The boot loader (for example, GRUB) subsequently takes over and presents a boot menu if configured, allowing the user to choose an operating system to load. It then loads the selected OS's kernel and initiates its booting process.
 
-**Limitations of MBR**
+**Limitations of MBR**<br>
 MBR has limitations in supporting only four primary partitions or three primary partitions and one extended partition, which can further contain multiple logical partitions. This restricts the number of partitions usable on a disk.
 
 MBR uses 32-bit addressing, limiting disk sizes to 2 terabytes (TB). Larger disks cannot be fully utilized under MBR due to this limitation.
 
 It also lacks built-in security features, making it susceptible to boot sector viruses or malicious code overwriting the boot loader.
 
-**GPT (GUID Partition Table)**
+**GPT (GUID Partition Table)**<br>
 The GUID Partition Table (GPT) is a partitioning scheme used on modern storage devices and is closely associated with UEFI-based systems. It replaced the older Master Boot Record (MBR) partitioning scheme due to its numerous advantages and capabilities, especially in conjunction with UEFI firmware.
 
-**Structure of GPT**
+**Structure of GPT**<br>
 GPT is a partitioning scheme that defines the layout of partitions on a storage device. Unlike MBR, which has limitations regarding disk size and partition count, GPT offers more flexibility and scalability.
 
 Each partition in a GPT disk is identified by a unique GUID (Globally Unique Identifier). This allows for up to 128 partitions per disk (though practical limitations might apply based on the operating system and system firmware).
@@ -128,7 +136,7 @@ GPT stores partition entries in a table located at the beginning and end of the 
 
 GUID partition table scheme diagram
 
-**Function of GPT**
+**Function of GPT**<br>
 UEFI requires a specific partition known as the UEFI System Partition (ESP), which is a primary component of the GPT scheme. The ESP contains bootloaders, firmware executables, and other necessary files for the boot process.
 
 UEFI firmware uses information stored in the GPT to locate the UEFI boot loader. The boot loader is stored in the ESP and is specified in the firmware's boot configuration data.
@@ -143,18 +151,27 @@ GPT supports disk sizes larger than 2TB, addressing the limitations of the MBR p
 The kernel is the core of the operating system, managing hardware resources, providing abstractions, and controlling interactions between hardware and software.
 Kernel initializes system resources and hardware. The kernel uses information provided by the **initrd(initial RAM Disk)** to mount the actual root file system **(rootfs)** (for example, ext4, XFS) specified in the boot parameters. The kernel replaces the **temporary root filesystem(initrd or initramfs) also known as early user space** with the **actual root filesystem(rootfs)** on the hard drive.
 
+![LFS01_ch03_screen21](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/0e7156eb-3638-4b1e-bebd-8ee3fcdf0841)
+
+
 The boot loader loads both the kernel and an **initial RAM–based file system (initramfs)** into memory, so it can be used directly by the kernel.
 The Linux kernel handles all operating system processes, such as memory management, task scheduling, I/O, interprocess communication, and overall system control. This is loaded in two stages – in the first stage, the kernel (as a compressed image file) is loaded into memory and decompressed, and a few fundamental functions are set up such as basic memory management, minimal amount of hardware setup. It's worth noting that **kernel image is self-decompressed**, which is a part of the kernel image's routine. For some platforms (like ARM 64-bit), kernel decompression has to be performed by the bootloader instead, like U-Boot.During boot-up, the boot loader (such as GRUB) loads the Linux kernel into memory. The kernel then decompresses itself and, if configured to use an initrd, loads the initrd image as a temporary root file system into a predetermined memory location.
 
 After the initrd image completes its tasks, the kernel takes control. It initializes the system hardware, mounts the root file system, and begins the user-space initialization process. An Initial RAM Disk (initrd), also known as an Initial RAM filesystem (initramfs), is a temporary file system loaded into memory during the boot process of a computer before the main operating system takes over. It's an essential component in modern Linux booting.
 
-**Initrd (Initial RAM Disk) Image**
+**Initrd (Initial RAM Disk) Image**<br>
 The primary purpose of the initrd is to provide a minimal set of tools, drivers, and utilities necessary to mount the root file system**(rootfs)**. It contains essential drivers for storage controllers, file systems, and other hardware components that the kernel might need to access the actual root file system. After the kernel initializes and detects hardware, the **initrd's** job is largely complete. It hands control over to the main kernel, which then unmounts the **initrd** and mounts the actual root file 
 system **(rootfs)** (specified by the bootloader or kernel parameters).
 
+![LFS01_ch03_screen22](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/58540488-8839-4821-8587-851109e3ad0c)
+
+
 Traditionally, initrd was used, but modern systems often use initramfs (a more flexible successor). Initramfs is a cpio archive that is uncompressed into a RAM disk at boot time. It's more versatile, allowing for a more modular approach to including essential files and drivers.
 
-**RootFS**
+![LFS01_ch03_screen26](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/e460f394-face-4447-acf8-c4bdabd32b4b)
+
+
+**RootFS**<br>
 The Root File System (rootfs) is a critical component in the booting process of an operating system. It is the top-level directory hierarchy of the file system and contains essential system files and directories.
 
 In the context of the booting process, the root file system is the initial file system that the operating system kernel mounts during the boot sequence.
@@ -168,6 +185,8 @@ The stability and functionality of the operating system depend on the successful
 ### 4. init stage process (systemd)
 The init process, whether traditional init or systemd, is responsible for starting system services and daemons. These services provide essential functionality to the operating system, such as networking, logging, and hardware-related services. Historically this was the "SysV init", which was just called "init". SysVinit viewed things as a serial process, divided into a series of sequential stages. Each stage required completion before the next could proceed.
 More recent Linux distributions are likely to use one of the more modern alternatives such as systemd.
+
+![LFS01_ch03_screen24](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/f0c0099c-82a2-4622-bfc3-c2ee26840aa7)
 
 The init system is the first daemon to start (during booting) and the last daemon to terminate (during shutdown).During the boot process, the init or systemd process is responsible for starting system daemons. These daemons are configured to launch automatically at specific runlevels (in the case of traditional init) or as defined in systemd unit files. In a standard Linux system, init is executed with a parameter, known as a runlevel, which takes a value from 0 to 6 and determines which subsystems are made operational. Each runlevel has its own scripts which codify the various processes involved in setting up or leaving the given runlevel, and it is these scripts which are referenced as necessary in the boot process. Init scripts are typically held in directories with names such as "/etc/rc...".
 

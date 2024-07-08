@@ -14,8 +14,9 @@ Booting process is when you powered ON your System until you'll get Login GUI in
 knowledge of each boot process step assists us in troubleshootings.
 
 ![image-373](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/10b5f828-7017-4da8-9dea-45e2be97cd25)
-
+The Boot Process.
 ![image-150](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/8ff4128b-1613-4109-a644-b91ea890c54d)
+The Booting Process.
 ### Linux 4 stage Booting Process
 | System Startup      | BootLoader stage | Kernel Stage      | init stage process |
 | ---------------         | ----------- | ----------- | ----------- |
@@ -33,7 +34,7 @@ The BIOS software is stored on a ROM chip on the motherboard.
 After POST successfully completed, BIOS/UEFI looks for bootable device(HDD,SDD,USB,CD-ROM,DVD,Network interfaces) on the system which stores OS(e.g. Linux) using a predetermined boot order(boot priority) that was previously set in the BIOS settings.
 
 ![LFS01_ch03_screen16](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/779d66d2-9a73-4157-8277-9f6443db569c)
-
+BIOS
 
 **BIOS/UEFI Firmware**<br>
 BIOS and UEFI are two essential firmware interfaces responsible for initializing hardware components, running system diagnostics, and supporting the startup of the operating system on a computer. These interfaces are vital players in the boot process of a system.
@@ -85,6 +86,7 @@ Historical bootloaders, no longer in common use, include:
 The Master Boot Record (MBR) plays a vital role in the storage structure of a disk. It is closely linked to BIOS-based systems and serves as the catalyst for the initial booting process.
 
 ![LFS01_ch03_screen20](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/5d4d421b-3537-4f30-9c39-26f9ed88f512)
+Master Boot Record
 
 ![LFS01_ch03_screen18](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/a60cd83b-6aaf-45e8-8d4c-66a965dc17d4)
 
@@ -152,7 +154,7 @@ The kernel is the core of the operating system, managing hardware resources, pro
 Kernel initializes system resources and hardware. The kernel uses information provided by the **initrd(initial RAM Disk)** to mount the actual root file system **(rootfs)** (for example, ext4, XFS) specified in the boot parameters. The kernel replaces the **temporary root filesystem(initrd or initramfs) also known as early user space** with the **actual root filesystem(rootfs)** on the hard drive.
 
 ![LFS01_ch03_screen21](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/0e7156eb-3638-4b1e-bebd-8ee3fcdf0841)
-
+The Linux Kernel
 
 The boot loader loads both the kernel and an **initial RAM–based file system (initramfs)** into memory, so it can be used directly by the kernel.
 The Linux kernel handles all operating system processes, such as memory management, task scheduling, I/O, interprocess communication, and overall system control. This is loaded in two stages – in the first stage, the kernel (as a compressed image file) is loaded into memory and decompressed, and a few fundamental functions are set up such as basic memory management, minimal amount of hardware setup. It's worth noting that **kernel image is self-decompressed**, which is a part of the kernel image's routine. For some platforms (like ARM 64-bit), kernel decompression has to be performed by the bootloader instead, like U-Boot.During boot-up, the boot loader (such as GRUB) loads the Linux kernel into memory. The kernel then decompresses itself and, if configured to use an initrd, loads the initrd image as a temporary root file system into a predetermined memory location.
@@ -164,12 +166,12 @@ The primary purpose of the initrd is to provide a minimal set of tools, drivers,
 system **(rootfs)** (specified by the bootloader or kernel parameters).
 
 ![LFS01_ch03_screen22](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/58540488-8839-4821-8587-851109e3ad0c)
-
+The Initial RAM Disk
 
 Traditionally, initrd was used, but modern systems often use initramfs (a more flexible successor). Initramfs is a cpio archive that is uncompressed into a RAM disk at boot time. It's more versatile, allowing for a more modular approach to including essential files and drivers.
 
 ![LFS01_ch03_screen26](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/e460f394-face-4447-acf8-c4bdabd32b4b)
-
+Text-Mode Logins
 
 **RootFS**<br>
 The Root File System (rootfs) is a critical component in the booting process of an operating system. It is the top-level directory hierarchy of the file system and contains essential system files and directories.
@@ -187,6 +189,7 @@ The init process, whether traditional init or systemd, is responsible for starti
 More recent Linux distributions are likely to use one of the more modern alternatives such as systemd.
 
 ![LFS01_ch03_screen24](https://github.com/mahtokamal/Linux_Fundamentals/assets/62587491/f0c0099c-82a2-4622-bfc3-c2ee26840aa7)
+/sbin/init and Services
 
 The init system is the first daemon to start (during booting) and the last daemon to terminate (during shutdown).During the boot process, the init or systemd process is responsible for starting system daemons. These daemons are configured to launch automatically at specific runlevels (in the case of traditional init) or as defined in systemd unit files. In a standard Linux system, init is executed with a parameter, known as a runlevel, which takes a value from 0 to 6 and determines which subsystems are made operational. Each runlevel has its own scripts which codify the various processes involved in setting up or leaving the given runlevel, and it is these scripts which are referenced as necessary in the boot process. Init scripts are typically held in directories with names such as "/etc/rc...".
 

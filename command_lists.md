@@ -13,7 +13,10 @@
     v - Verbose 
     f - forcefully 
     t - sort by time
-
+        
+> [!NOTE]
+> **Flags** are used to modify the behavior of a command. For example ls -a, -a tells the ls executable to list all files in the directoy, including hidden ones. Flags are also called **OPTIONS**.
+ 
  ### cd
  ### dir
  ### pwd
@@ -79,9 +82,14 @@
 **-------------------------------------------------------------------------------------------------------------------------------------**
 ## Other additional Commands
 ### man
+**Description -** an interface to the system reference manuals or macros to format man pages.<br>
+**Example -** man ls <br>
+(present manual interface for respective commands along with use cases).
 ### whoami
 ### clear
 ### grep
 ### history
 ### reboot
 ### shutdown
+### whatis 
+### whereis

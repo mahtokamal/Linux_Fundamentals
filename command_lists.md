@@ -1,10 +1,11 @@
 # List of Linux Basic Commands
 ## File and Directory
 ### ls (la)
-    list directory contents (including files and folders)
-    example :ls -a
+    Descriptions:- list directory contents (including files and folders)
+    example:- ls -a
+    Output:- Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos .ssh .config  
     flags (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) 
-    a - all includes hidden files and folder 
+    a - all includes hidden files and folder (directory)
     l - long list
     h - human readable format
     t - sort by time 
@@ -19,8 +20,14 @@
 > **Flags** are used to modify the behavior of a command. For example ls -a, -a tells the ls executable to list all files in the directoy, including hidden ones. Flags are also called **OPTIONS**.
  
  ### cd
+     Description:- change directory or file
+     Example:- cd Desktop/, cd, cd ..
+     Output: goes to Desktop directory or folder.
  ### dir
  ### pwd
+     Description:- print name of current/working directory
+     Example:- pwd
+     Output:- /home/kamal/Desktop
  ### mkdir
  ### rmdir
  ### cp

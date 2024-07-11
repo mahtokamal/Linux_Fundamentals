@@ -1,8 +1,9 @@
 # List of Linux Basic Commands
 ## File and Directory
 ### ls (la)
-    list directory contents 
-    example :ls (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) 
+    list directory contents (including files and folders)
+    example :ls -a
+    flags (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) 
     a - all includes hidden files and folder 
     l - long list
     h - human readable format
@@ -82,9 +83,9 @@
 **-------------------------------------------------------------------------------------------------------------------------------------**
 ## Other additional Commands
 ### man
-**Description -** an interface to the system reference manuals or macros to format man pages.<br>
-**Example -** man ls <br>
-(present manual interface for respective commands along with use cases).
+    Description - an interface to the system reference manuals or macros to format man pages.
+    Example - man ls
+    (present manual interface for respective commands along with use cases).
 ### whoami
 ### clear
 ### grep

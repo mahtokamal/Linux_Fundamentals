@@ -52,41 +52,79 @@
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
  ### cp
-     Description:- print name of current/working directory
-     Example:- cp password.txt security/
-     Output:- /home/kamal/Desktop
+     Description:- copy files and directories
+     Example:- cp password.txt security/ or cp -r kam/ kam2/ 
+     Output:- 
+> [!NOTE]
+> Use flags such as -R -r(recursively copies files or folder inside the directory) while copying directories to another. 
+     
  ### mv
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- move (rename) files or directories
+     Example:- mv k1.txt kam2/ (moving files k1.txt to directory kam2/)
+     Example:- mv kam.txt k1.txt (renaming file kam.txt to k1.txt)
+     Example:- mv kam/ kam2/ (renaming directory kam/ to kam2/)
+     Example:- mv kam/ kam3/ (moving directory kam/ to kam3/)
+     Output:-  
  ### touch
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- change file timestamps (create files with empty contents)
+     Example:- touch hello.txt
+     Output:- 
  ### nano
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- open files in nano text-editors
+     Example:- nano hello.txt
+     Output:- 
  ### gedit
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- open files in gedit text-editors
+     Example:- gedit hello.txt
+     Output:- 
  ### cat
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- concatenate files and print on the standard output (to view contents of file)
+     Example:- cat hello.txt
+     Output:-  This is your right time to
+               follow your passion.
+
  ### tac
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- concatenate and print files in reverse 
+     Example:- tac hello.txt
+     Output:-  follow your passion.
+               This is your right time to
+
  ### head
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- output the first part of files
+     Example:- head -n 20 thousands.txt (print first 20 lines of files)
+     Example:- head thousands.txt
+     Output:-  1
+               2
+               3
+               4
+               5
+               6
+               7
+               8
+               9
+               10
+
+> [!NOTE]
+> By default head print the first 10 lines of each FILE to standard output.
+ 
  ### tail
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- output the last part of files
+     Example:- tail -n 20 thousands.txt (print last 20 lines of files)
+     Example:- tail thousands.txt
+     Output:- 991
+              992
+              993
+              994
+              995
+              996
+              997
+              998
+              999
+              1000
+
+> [!NOTE]
+> By default tail print the last 10 lines of each FILE to standard output.
+
  ### find
      Description:- print name of current/working directory
      Example:- pwd

@@ -89,6 +89,12 @@
      Output:-  follow your passion.
                This is your right time to
 
+### grep
+    Description:- print lines that match patterns
+    Example:- tac hello.txt
+    Output:-  follow your passion.
+               This is your right time to
+
  ### head
      Description:- output the first part of files
      Example:- head -n 20 thousands.txt (print first 20 lines of files)
@@ -103,6 +109,9 @@
                8
                9
                10
+
+    for((i=1;i<=100;i++)); do echo $i >> hundreds.txt;done (prints numbers from 1 - 100 and will be saved into hundreds.txt)
+    for((i=1;i<=1000;i++)); do echo $i >> thousands.txt;done (prints numbers from 1 - 100 and will be saved into thousands.txt)
 
 > [!NOTE]
 > By default head print the first 10 lines of each FILE to standard output.
@@ -126,21 +135,42 @@
 > By default tail print the last 10 lines of each FILE to standard output.
 
  ### find
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- search for files in a directory hierarchy
+     Example:- find *.txt 
+     Example:- find k?.txt ('?' represents exactly one character )
+     Example:- find kam*.txt ('*' represents any number of character)
+     Output:-
+
  ### file
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- determine file type
+     Example:- file k1.txt
+     Output:- k1.txt: ASCII text
+
+### wc
+    Description:- print newline, word, and byte counts for each file
+    Example:- wc k1.txt
+    Output:- 1  5 24 k1.txt (lines, words, characters)
+> [!NOTE]
+> -c(bytes count),-m(characters count),-l(newlines count ),-L, -w(words count)
+
  ### zip
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- package and compress (archive) files
+     Example:- zip zipfile.zip k1.txt thousands.txt (it zips the files k1.txt and thousands.txt into zipfile.zip)
+     Output:-  adding: k1.txt (deflated 8%)
+               adding: thousands.txt (deflated 53%)
+
  ### unzip
-     Description:- print name of current/working directory
-     Example:- pwd
-     Output:- /home/kamal/Desktop
+     Description:- list, test and extract compressed files in a ZIP archive
+     Example:- unzip zipfile.zip ()
+     Output:-  Archive:  zipfile.zip
+               inflating: k1.txt                  
+               inflating: thousands.txt
+    Example:- unzip zipfile.zip -d ~/Desktop/extracted/
+    Archive:  zipfile.zip
+              inflating: /home/kamal/Desktop/extracted/k1.txt  
+              inflating: /home/kamal/Desktop/extracted/thousands.txt 
+
+###
 **--------------------------------------------------------------------------------------------------------------------**
 ## Networking
 ### route

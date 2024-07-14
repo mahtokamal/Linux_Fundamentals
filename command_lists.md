@@ -98,6 +98,15 @@
  ### uniq
      Description:- report or omit(filters-out) repeated lines in a file. Uniq helps to detect the adjacent duplicate lines 
      and also deletes the duplicate lines. 
+
+     -c (count) : Prefix lines by the number of occurrences in the input, followed by a space.
+     
+     -d (repeated) : Only output lines that are repeated in the input.
+     -i (ignore-case) : Ignore differences in case when comparing lines.
+     -f (skip-fields=N) : Avoid comparing the first N fields in each line.
+     -s (skip-chars=N) : Avoid comparing the first N characters in each line.
+     -u (unique) :  Only output lines that are unique in the input.
+
      
      Example:- cat hello.txt
      Output:-  I love cricket.

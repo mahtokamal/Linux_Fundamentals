@@ -91,14 +91,18 @@
 
  ### grep
     Description:- print lines that match patterns
-    Example:- tac hello.txt
-    Output:-  follow your passion.
-               This is your right time to
+    Example:- grep "time" k1.txt
+    Output:-  This is your right **time**.
+              **time** and tide wait for none.
 
  ### uniq
+ 
  ### diff
+ 
  ### less
+ 
  ### more
+ 
  ### head
      Description:- output the first part of files
      Example:- head -n 20 thousands.txt (print first 20 lines of files)

@@ -223,9 +223,9 @@
     (present manual interface for respective commands along with use cases).
 ### whoami
 ### clear
-### grep
 ### history
 ### reboot
 ### shutdown
 ### whatis 
 ### whereis
+### which

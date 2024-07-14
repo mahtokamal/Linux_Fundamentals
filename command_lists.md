@@ -96,8 +96,36 @@
               **time** and tide wait for none.
 
  ### uniq
- 
+     Description:- report or omit(filters-out) repeated lines in a file. Uniq helps to detect the adjacent duplicate lines 
+     and also deletes the duplicate lines. 
+     
+     Example:- cat hello.txt
+     Output:-  I love cricket.
+               I love cricket.
+               I love cricket.
+
+               I love music of Shankar.
+               I love music of Shankar.
+
+               Thank You!
+     
+     Example:- uniq hello.txt
+     Output:-  I love cricket.
+
+               I love music of Shankar.
+
+               Thank You!
+
+     Example:- uniq -u hello.txt (shows only unique lines without duplicate lines)
+     Output:-  
+     
+               Thank You!
+
+> [!NOTE]
+> uniq isn’t able to detect the duplicate lines unless they are adjacent to each other. The content in the file must be therefore sorted before using uniq or you can simply use sort -u instead of uniq command.
+   
  ### diff
+ 
  
  ### less
  

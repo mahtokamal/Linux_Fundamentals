@@ -161,11 +161,11 @@
 
  ### unzip
      Description:- list, test and extract compressed files in a ZIP archive
-     Example:- unzip zipfile.zip ()
+     Example:- unzip zipfile.zip (extraction of zipfile.zip)
      Output:-  Archive:  zipfile.zip
                inflating: k1.txt                  
                inflating: thousands.txt
-    Example:- unzip zipfile.zip -d ~/Desktop/extracted/
+    Example:- unzip zipfile.zip -d ~/Desktop/extracted/ (extraction of zipfile.zip to destination folder)
     Archive:  zipfile.zip
               inflating: /home/kamal/Desktop/extracted/k1.txt  
               inflating: /home/kamal/Desktop/extracted/thousands.txt 

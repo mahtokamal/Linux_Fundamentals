@@ -21,22 +21,22 @@
 > [!NOTE]
 > **Flags** are used to modify the behavior of a command. For example ls -a, -a tells the ls executable to list all files in the directoy, including hidden ones. Flags are also called **OPTIONS**.
  
- ### cd
+### cd
      Description:- change directory or file
      Example:- cd Desktop/, cd, cd ..
      Output: goes to Desktop directory or folder.
  
- ### dir
+### dir
      Description:- list directory contents
      Example:- dir
      Output:- Desktop  Documents  Downloads  Music  Pictures	Public	snap  Templates  Videos
  
- ### pwd
+### pwd
      Description:- print name of current/working directory
      Example:- pwd
      Output:- /home/kamal/Desktop
  
- ### mkdir
+### mkdir
      Description:- make directories
      Example:- mkdir examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents  examples   Pictures  snap    Videos
@@ -89,12 +89,16 @@
      Output:-  follow your passion.
                This is your right time to
 
-### grep
+ ### grep
     Description:- print lines that match patterns
     Example:- tac hello.txt
     Output:-  follow your passion.
                This is your right time to
 
+ ### uniq
+ ### diff
+ ### less
+ ### more
  ### head
      Description:- output the first part of files
      Example:- head -n 20 thousands.txt (print first 20 lines of files)
@@ -116,7 +120,7 @@
 > [!NOTE]
 > By default head print the first 10 lines of each FILE to standard output.
  
- ### tail
+  ### tail
      Description:- output the last part of files
      Example:- tail -n 20 thousands.txt (print last 20 lines of files)
      Example:- tail thousands.txt
@@ -146,7 +150,7 @@
      Example:- file k1.txt
      Output:- k1.txt: ASCII text
 
-### wc
+ ### wc
     Description:- print newline, word, and byte counts for each file
     Example:- wc k1.txt
     Output:- 1  5 24 k1.txt (lines, words, characters)
@@ -168,9 +172,11 @@
     Example:- unzip zipfile.zip -d ~/Desktop/extracted/ (extraction of zipfile.zip to destination folder)
     Archive:  zipfile.zip
               inflating: /home/kamal/Desktop/extracted/k1.txt  
-              inflating: /home/kamal/Desktop/extracted/thousands.txt 
+              inflating: /home/kamal/Desktop/extracted/thousands.txt
+ ### tar
+ ### gz
 
-###
+ ### vim
 **--------------------------------------------------------------------------------------------------------------------**
 ## Networking
 ### route
@@ -223,9 +229,31 @@
     (present manual interface for respective commands along with use cases).
 ### whoami
 ### clear
-### history
+### history [!12]
 ### reboot
 ### shutdown
-### whatis 
+### whatis
+### date
+### time
+### help
+### uname
 ### whereis
 ### which
+### hostname
+### host google.com
+### expr
+### bash --version
+### cal 2024
+### echo > and >>
+### ping google.com
+### bc
+### info echo
+### ln test1.txt testhardlinks
+### ln -s test1.txt softlinks
+### directory loop
+### type pwd
+### wildcards
+### alias
+### absolute VS realtive path
+### chmod
+

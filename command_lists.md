@@ -284,14 +284,58 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
  ### vim
 **--------------------------------------------------------------------------------------------------------------------**
 ## Networking
-### route
-### netstat
-### whois
-### ping
-### dig
-### host
-### hostname
+
+ ### ifconfig
+    Description:- configure a network interface
+    Example:- ifconfig
+    Output:- 
+ 
+ ### route
+    Description:- show / manipulate the IP routing table
+    Example:- wc k1.txt
+    Output:- 1  5 24 k1.txt (lines, words, characters)
+ 
+ ### netstat
+    Description:- Print network connections, routing tables, interface statis‐tics, masquerade connections, and multicast 
+    memberships
+    Example:- wc k1.txt
+    Output:- 1  5 24 k1.txt (lines, words, characters)
+ 
+ ### whois
+    Description:- client for the whois directory service
+    Example:- wc k1.txt
+    Output:- 1  5 24 k1.txt (lines, words, characters)
+ 
+ ### ping
+    Description:- send ICMP ECHO_REQUEST to network hosts
+    Example:- ping google.com
+    Output:- PING google.com (142.251.36.238) 56(84) bytes of data.
+            64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=1 ttl=128 time=63.6 ms
+            64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=2 ttl=128 time=58.9 ms
+            64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=3 ttl=128 time=53.7 ms
+            64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=4 ttl=128 time=51.0 ms
+            64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=5 ttl=128 time=50.2 ms
+
+ 
+ ### dig
+    Description:- print newline, word, and byte counts for each file
+    Example:- wc k1.txt
+    Output:- 1  5 24 k1.txt (lines, words, characters)
+ 
+ ### host
+    Description:- DNS lookup utility
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+ 
+ ### hostname
+    Description:- show or set the system's host name
+    Example:- hostname
+    Output:- Ubuntu
+
 **--------------------------------------------------------------------------------------------------------------------**
+
 ## User & Group
 ### useradd
 ### userdel

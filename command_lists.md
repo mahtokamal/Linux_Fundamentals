@@ -177,14 +177,26 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
 > As a summary to make both the files identical, first add Tamil Nadu in the first file at very beginning to match line 1 of second file after that change line 2 and 3 of first file i.e. Uttar Pradesh and Kolkata with line 3 of second file i.e. Andhra Pradesh. After that change line 5 of first file i.e. Jammu and Kashmir with line 5 of second file i.e. Uttar Pradesh. 
      
  ### less
-     Description:- output the first part of files
-     Example:- head -n 20 thousands.txt (print first 20 lines of files)
-     Example:- head thousands.txt
+     Description:- opposite of more. Less command is a Linux utility that can be used to read the contents of a text file 
+     one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, 
+     but accesses it page by page. 
+
+     For example, if it’s a large file and you are reading it using any text editor, then the complete file will be loaded 
+     to the main memory. The less command doesn’t load the entire file but loads it part by part which makes it faster. 
+
+     Example:- less [options/flags] filename
+     Example:- 
  
  ### more
-     Description:- output the first part of files
-     Example:- head -n 20 thousands.txt (print first 20 lines of files)
-     Example:- head thousands.txt
+     Description:- file perusal filter for crt viewing. more command is used to view the text files in the command prompt, 
+     displaying one screen at a time in case the file is large (For example log files). The more command also allows the 
+     user do scroll up and down through the page. The syntax along with options and command is as follows. Another 
+     application of more is to use it with some other command after a pipe. When the output is large, we can use more 
+     command to see output one by one.
+
+     
+     Example:- less [options/flags] filename
+     Example:- 
  
  ### head
      Description:- output the first part of files
@@ -202,7 +214,8 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
                10
 
     for((i=1;i<=100;i++)); do echo $i >> hundreds.txt;done (prints numbers from 1 - 100 and will be saved into hundreds.txt)
-    for((i=1;i<=1000;i++)); do echo $i >> thousands.txt;done (prints numbers from 1 - 100 and will be saved into thousands.txt)
+    for((i=1;i<=1000;i++)); do echo $i >> thousands.txt;done (prints numbers from 1 - 100 and will be saved into 
+    thousands.txt)
 
 > [!NOTE]
 > By default head print the first 10 lines of each FILE to standard output.

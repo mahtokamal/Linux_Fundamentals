@@ -274,6 +274,11 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
               inflating: /home/kamal/Desktop/extracted/k1.txt  
               inflating: /home/kamal/Desktop/extracted/thousands.txt
  ### tar
+
+https://www.freecodecamp.org/news/how-to-compress-files-in-linux-with-tar-command/
+https://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-sheet.php
+https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
+ 
  ### gz
 
  ### vim

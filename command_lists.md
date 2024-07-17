@@ -4,7 +4,8 @@
 
 ### ls (la)
     Descriptions:- list directory contents (including files and folders)
-    example:- ls -a
+    
+    Example:- ls -a
     Output:- Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos .ssh .config  
     flags (-a, -l, -h, -r, -t, -R, -i, -I, -v, -f, -t) 
     a - all includes hidden files and folder (directory)
@@ -23,36 +24,43 @@
  
 ### cd
      Description:- change directory or file
+     
      Example:- cd Desktop/, cd, cd ..
      Output: goes to Desktop directory or folder.
  
 ### dir
      Description:- list directory contents
+     
      Example:- dir
      Output:- Desktop  Documents  Downloads  Music  Pictures	Public	snap  Templates  Videos
  
 ### pwd
      Description:- print name of current/working directory
+     
      Example:- pwd
      Output:- /home/kamal/Desktop
  
 ### mkdir
      Description:- make directories
+     
      Example:- mkdir examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents  examples   Pictures  snap    Videos
  
  ### rmdir
      Description:- remove empty directories
+     
      Example:- rmdir examples/ or rm -d examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
  ### rm
      Description:- remove files or directories
+     
      Example:- rmdir -iR examples/ or rm password.txt(removes file)
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
  ### cp
      Description:- copy files and directories
+     
      Example:- cp password.txt security/ or cp -r kam/ kam2/ 
      Output:- 
 > [!NOTE]
@@ -60,6 +68,7 @@
      
  ### mv
      Description:- move (rename) files or directories
+     
      Example:- mv k1.txt kam2/ (moving files k1.txt to directory kam2/)
      Example:- mv kam.txt k1.txt (renaming file kam.txt to k1.txt)
      Example:- mv kam/ kam2/ (renaming directory kam/ to kam2/)
@@ -67,30 +76,36 @@
      Output:-  
  ### touch
      Description:- change file timestamps (create files with empty contents)
+     
      Example:- touch hello.txt
      Output:- 
  ### nano
      Description:- open files in nano text-editors
+     
      Example:- nano hello.txt
      Output:- 
  ### gedit
      Description:- open files in gedit text-editors
+     
      Example:- gedit hello.txt
      Output:- 
  ### cat
      Description:- concatenate files and print on the standard output (to view contents of file)
+     
      Example:- cat hello.txt
      Output:-  This is your right time to
                follow your passion.
 
  ### tac
      Description:- concatenate and print files in reverse 
+     
      Example:- tac hello.txt
      Output:-  follow your passion.
                This is your right time to
 
  ### grep
     Description:- print lines that match patterns
+    
     Example:- grep "time" k1.txt
     Output:-  This is your right **time**.
               **time** and tide wait for none.
@@ -135,6 +150,7 @@
    
  ### diff
      Description:- compare files line by line
+     
      Example:- cat a.txt
      Output:-  Gujarat
                Uttar Pradesh
@@ -200,6 +216,7 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
  
  ### head
      Description:- output the first part of files
+     
      Example:- head -n 20 thousands.txt (print first 20 lines of files)
      Example:- head thousands.txt
      Output:-  1
@@ -222,6 +239,7 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
  
   ### tail
      Description:- output the last part of files
+     
      Example:- tail -n 20 thousands.txt (print last 20 lines of files)
      Example:- tail thousands.txt
      Output:- 991
@@ -240,6 +258,7 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
 
  ### find
      Description:- search for files in a directory hierarchy
+     
      Example:- find *.txt 
      Example:- find k?.txt ('?' represents exactly one character )
      Example:- find kam*.txt ('*' represents any number of character)
@@ -247,11 +266,13 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
 
  ### file
      Description:- determine file type
+     
      Example:- file k1.txt
      Output:- k1.txt: ASCII text
 
  ### wc
     Description:- print newline, word, and byte counts for each file
+    
     Example:- wc k1.txt
     Output:- 1  5 24 k1.txt (lines, words, characters)
 > [!NOTE]
@@ -259,12 +280,14 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
 
  ### zip
      Description:- package and compress (archive) files
+     
      Example:- zip zipfile.zip k1.txt thousands.txt (it zips the files k1.txt and thousands.txt into zipfile.zip)
      Output:-  adding: k1.txt (deflated 8%)
                adding: thousands.txt (deflated 53%)
 
  ### unzip
      Description:- list, test and extract compressed files in a ZIP archive
+     
      Example:- unzip zipfile.zip (extraction of zipfile.zip)
      Output:-  Archive:  zipfile.zip
                inflating: k1.txt                  
@@ -287,27 +310,63 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 
  ### ifconfig
     Description:- configure a network interface
+    
     Example:- ifconfig
     Output:- 
  
  ### route
     Description:- show / manipulate the IP routing table
-    Example:- wc k1.txt
-    Output:- 1  5 24 k1.txt (lines, words, characters)
+    
+    Example:- route
+    Output:- Kernel IP routing table
+             Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+             default         192.168.124.2   0.0.0.0         UG    100    0        0 eth0
+             192.168.124.0   0.0.0.0         255.255.255.0   U     100    0        0 eth0)
  
  ### netstat
     Description:- Print network connections, routing tables, interface statis‐tics, masquerade connections, and multicast 
     memberships
-    Example:- wc k1.txt
-    Output:- 1  5 24 k1.txt (lines, words, characters)
+    
+    Example:- netstat
+    Example:- nestat -aut (all ports of TCP and UDP)
+    Output:- Active Internet connections (servers and established)
+             Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+             udp        0      0 192.168.124.128:bootpc  192.168.124.254:bootps  ESTABLISHED
+
  
  ### whois
-    Description:- client for the whois directory service
-    Example:- wc k1.txt
-    Output:- 1  5 24 k1.txt (lines, words, characters)
+    Description:- client for the whois directory service. Whois is a command-line utility used in Linux systems to retrieve 
+    information about domain names, IP addresses, and network devices registered with the Internet Corporation for Assigned 
+    Names and Numbers (ICANN). The data received by Whois consists of the name and contact information of the domain or IP 
+    address owner, the registration and expiration date, the domain registrar, and the server information.
+    
+    Example:- whois geeksforgeeks.org 
+    Output:- Domain Name: geeksforgeeks.org
+            Registry Domain ID: f507261c73964021b7430545a8b370ee-LROR
+            Registrar WHOIS Server: http://whois.publicdomainregistry.com
+            Registrar URL: http://www.publicdomainregistry.com
+            Updated Date: 2022-04-21T06:36:07Z
+            Creation Date: 2009-03-19T06:08:55Z
+            Registry Expiry Date: 2030-03-19T06:08:55Z
+            Registrar: PDR Ltd. d/b/a PublicDomainRegistry.com
+            Registrar IANA ID: 303
+            Registrar Abuse Contact Email: abuse@publicdomainregistry.com
+            Registrar Abuse Contact Phone: +1.2013775952
+            Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+            Registry Registrant ID: REDACTED FOR PRIVACY
+            Registrant Name: REDACTED FOR PRIVACY
+            Registrant Organization: Privacy Protect, LLC (PrivacyProtect.org)
+            Registrant Street: REDACTED FOR PRIVACY
+            Registrant City: REDACTED FOR PRIVACY
+            Registrant State/Province: MA
+            Registrant Postal Code: REDACTED FOR PRIVACY
+            Registrant Country: US
+
+
  
  ### ping
     Description:- send ICMP ECHO_REQUEST to network hosts
+    
     Example:- ping google.com
     Output:- PING google.com (142.251.36.238) 56(84) bytes of data.
             64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=1 ttl=128 time=63.6 ms
@@ -318,12 +377,34 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 
  
  ### dig
-    Description:- print newline, word, and byte counts for each file
-    Example:- wc k1.txt
-    Output:- 1  5 24 k1.txt (lines, words, characters)
+    Description:- DNS lookup utility. dig command stands for Domain Information Groper. It is used for retrieving 
+    information about DNS name servers. It is basically used by network administrators. It is used for verifying and 
+    troubleshooting DNS problems and to perform DNS lookups. Dig command replaces older tools such as nslookup and the host.
+    
+    Example:- dig geeksforgeeks.org
+    Output:- ; <<>> DiG 9.18.16-1-Debian <<>> geeksforgeeks.org
+            ;; global options: +cmd
+            ;; Got answer:
+            ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6320
+            ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+            
+            ;; OPT PSEUDOSECTION:
+            ; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 512
+            ;; QUESTION SECTION:
+            ;geeksforgeeks.org.             IN      A
+            
+            ;; ANSWER SECTION:
+            geeksforgeeks.org.      5       IN      A       34.218.62.116
+            
+            ;; Query time: 28 msec
+            ;; SERVER: 192.168.124.2#53(192.168.124.2) (UDP)
+            ;; WHEN: Wed Jul 17 12:50:00 CEST 2024
+            ;; MSG SIZE  rcvd: 62
+
  
  ### host
-    Description:- DNS lookup utility
+    Description:- DNS lookup utility.
+    
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
             google.com has IPv6 address 2a00:1450:4016:80a::200e
@@ -331,6 +412,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
  
  ### hostname
     Description:- show or set the system's host name
+    
     Example:- hostname
     Output:- Ubuntu
 

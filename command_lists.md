@@ -421,7 +421,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 ## User & Group
 
 ### useradd
-    Description:- DNS lookup utility.
+    Description:- useradd - create a new user or update default new user information.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -429,7 +429,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### userdel
-    Description:- DNS lookup utility.
+    Description:- userdel - delete a user account and related files.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -437,7 +437,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### usermod
-    Description:- DNS lookup utility.
+    Description:- modify a user account.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -445,7 +445,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### groupadd
-    Description:- DNS lookup utility.
+    Description:- create a new group.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -453,7 +453,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### groupdel
-    Description:- DNS lookup utility.
+    Description:- delete a group.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -461,7 +461,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### groupmod
-    Description:- DNS lookup utility.
+    Description:- modify a group definition on the system.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238
@@ -469,7 +469,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com mail is handled by 10 smtp.google.com.
 
 ### passwd
-    Description:- DNS lookup utility.
+    Description:- change user password.
     
     Example:- host google.com
     Output:- google.com has address 142.251.36.238

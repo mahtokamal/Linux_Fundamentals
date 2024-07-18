@@ -419,13 +419,62 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 **--------------------------------------------------------------------------------------------------------------------**
 
 ## User & Group
+
 ### useradd
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### userdel
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### usermod
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### groupadd
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### groupdel
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### groupmod
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
+
 ### passwd
+    Description:- DNS lookup utility.
+    
+    Example:- host google.com
+    Output:- google.com has address 142.251.36.238
+            google.com has IPv6 address 2a00:1450:4016:80a::200e
+            google.com mail is handled by 10 smtp.google.com.
 
 
 **--------------------------------------------------------------------------------------------------------------------**
@@ -456,6 +505,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 ## Other additional Commands
 ### man
     Description - an interface to the system reference manuals or macros to format man pages.
+    
     Example - man ls
     (present manual interface for respective commands along with use cases).
 ### whoami

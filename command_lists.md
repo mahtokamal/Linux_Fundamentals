@@ -419,30 +419,163 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 **--------------------------------------------------------------------------------------------------------------------**
 
 ## User & Group
+### users
+    Description:- print the user names of users currently logged in to the current host.
+    
+    Example:- users
+    Output:- kamal
 
 ### useradd
     Description:- useradd - create a new user or update default new user information.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo useradd sachin
+    Output:- [sudo] password for kamal: 
+
+### passwd
+    Description:- change user password.
+    
+    Example:- sudo passwd sachin
+    Output:- New password: 
+            BAD PASSWORD: The password is shorter than 8 characters
+            Retype new password: 
+            passwd: password updated successfully.
+    
+    Example:- cut -d: -f1 /etc/passwd
+    Output:- root
+            daemon
+            bin
+            sys
+            sync
+            games
+            man
+            lp
+            mail
+            news
+            uucp
+            proxy
+            www-data
+            backup
+            list
+            irc
+            gnats
+            nobody
+            systemd-network
+            systemd-resolve
+            messagebus
+            systemd-timesync
+            syslog
+            _apt
+            tss
+            uuidd
+            systemd-oom
+            tcpdump
+            avahi-autoipd
+            usbmux
+            dnsmasq
+            kernoops
+            avahi
+            cups-pk-helper
+            rtkit
+            whoopsie
+            sssd
+            speech-dispatcher
+            fwupd-refresh
+            nm-openvpn
+            saned
+            colord
+            geoclue
+            pulse
+            gnome-initial-setup
+            hplip
+            gdm
+            kamal
+            sachin
+
 
 ### userdel
-    Description:- userdel - delete a user account and related files.
+    Description:- delete a user account and related files.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo userdel sachin
+    Output:- root
+            daemon
+            bin
+            sys
+            sync
+            games
+            man
+            lp
+            mail
+            news
+            uucp
+            proxy
+            www-data
+            backup
+            list
+            irc
+            gnats
+            nobody
+            systemd-network
+            systemd-resolve
+            messagebus
+            systemd-timesync
+            syslog
+            _apt
+            tss
+            uuidd
+            systemd-oom
+            tcpdump
+            avahi-autoipd
+            usbmux
+            dnsmasq
+            kernoops
+            avahi
+            cups-pk-helper
+            rtkit
+            whoopsie
+            sssd
+            speech-dispatcher
+            fwupd-refresh
+            nm-openvpn
+            saned
+            colord
+            geoclue
+            pulse
+            gnome-initial-setup
+            hplip
+            gdm
+            kamal
 
 ### usermod
-    Description:- modify a user account.
+    Description:- modify a user account. usermod command or modify user is a command in Linux that is used to change the 
+    properties of a user in Linux through the command line. After creating a user we have to sometimes change their 
+    attributes like login name, adding to the groups, changing user home directory, password or login directory etc.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo usermod -c "This is a comment examples of a usermode for sachin user" sachin (modifies user sachin by 
+    adding comments )
+
+    Example:- sudo cat /etc/passwd | grep sachin
+    Output:- sachin:x:1001:1001:This is a comment examples of a usermode for sachin user:/home/sachin:/bin/sh
+
+> [!IMPORTANT]
+> The information of a user is stored in the following files:
+/etc/passwd, 
+/etc/group, 
+/etc/shadow, 
+/etc/login.defs, 
+/etc/gshadow, 
+/etc/login.defs
+
+### groups
+    Description:- print the groups a user is in.
+    
+    Example:- groups
+    Output:-  kamal adm cdrom sudo dip plugdev lpadmin lxd sambashare
+
+    Example:- groups kamal
+    Output:-  kamal : kamal adm cdrom sudo dip plugdev lpadmin lxd sambashare
+
+    Example:- groups sachin
+    Output:-  sachin : sachin
 
 ### groupadd
     Description:- create a new group.
@@ -468,13 +601,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             google.com has IPv6 address 2a00:1450:4016:80a::200e
             google.com mail is handled by 10 smtp.google.com.
 
-### passwd
-    Description:- change user password.
-    
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+
 
 
 **--------------------------------------------------------------------------------------------------------------------**

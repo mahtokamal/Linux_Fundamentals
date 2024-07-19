@@ -578,31 +578,60 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Output:-  sachin : sachin
 
 ### groupadd
-    Description:- create a new group.
+    Description:- create a new group. A group is a collection of users with similar permissions or access levels. Groups 
+    make it easier to manage and assign permissions to multiple users at once, enhancing security and simplifying 
+    administrative tasks.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo groupadd cybersecurity
+    Output:- password for kamal: 
+
+    Example:- sudo tail /etc/group
+    Output:- colord:x:130:
+            geoclue:x:131:
+            pulse:x:132:
+            pulse-access:x:133:
+            gdm:x:134:
+            lxd:x:135:kamal
+            kamal:x:1000:
+            sambashare:x:136:kamal
+            sachin:x:1001:
+            cybersecurity:x:1002: 
 
 ### groupdel
     Description:- delete a group.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo groupdel cybersecurity
+    Output:- 
+
+    Example:- sudo tail /etc/group
+    Output:- saned:x:129:
+            colord:x:130:
+            geoclue:x:131:
+            pulse:x:132:
+            pulse-access:x:133:
+            gdm:x:134:
+            lxd:x:135:kamal
+            kamal:x:1000:
+            sambashare:x:136:kamal
+            sachin:x:1001:
 
 ### groupmod
     Description:- modify a group definition on the system.
     
-    Example:- host google.com
-    Output:- google.com has address 142.251.36.238
-            google.com has IPv6 address 2a00:1450:4016:80a::200e
-            google.com mail is handled by 10 smtp.google.com.
+    Example:- sudo groupmod -n cyberforensic cybersecurity
+    Output:- 
 
-
-
+    Example:- sudo tail /etc/group
+    Output:-  colord:x:130:
+            geoclue:x:131:
+            pulse:x:132:
+            pulse-access:x:133:
+            gdm:x:134:
+            lxd:x:135:kamal
+            kamal:x:1000:
+            sambashare:x:136:kamal
+            sachin:x:1001:
+            cyberforensic:x:1002:
 
 **--------------------------------------------------------------------------------------------------------------------**
 ## Permission & ownership

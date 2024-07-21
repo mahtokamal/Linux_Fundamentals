@@ -637,9 +637,64 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 ## Permission & ownership
 ### chmod
     Description:- change file mode bits.
-    
-    Example:- sudo groupdel cybersecurity
-    Output:- 
+
+**Modes in chmod Command**
+1. Symbolic Mode
+The following operators can be used with the symbolic mode:
+|Operators |Definition |
+|----------|----------|
+|`+`|Add permissions|
+| `-`|Remove permissions |
+|`=`|Set the permissions to the specified values|
+
+The following letters that can be used in symbolic mode:
+|Letters |Definition |
+|----------|----------|
+|`r`|Read permission|
+| `w`|Write permission |
+|`x`|Execute permission|
+
+The following Reference that are used:
+|Reference | class |
+|----------|----------|
+|u|Owner|
+| g|Group |
+|o|Others|
+|a|All (owner,groups,others)|
+
+Examples of Using the Symbolic mode: <br>
+Read, write and execute permissions to the file owner: <br>
+Ex:- chmod u+rwx [file_name] <br>
+output:- <br>
+
+Remove write permission for the group and others: <br>
+Ex:- chmod go-w [file_name] <br>
+output:-  <br>
+
+Read and write for Owner, and Read-only for the group and other: <br>
+ Ex:- chmod u+rw,go+r [file_name] <br>
+ 
+2. Octal Mode
+ - First digit specify the permission for Owner.
+ - Second digit specify the permission for Group. 
+ - Third digit specify the permission for Others. 
+
+>[!NOTE]
+>The digits are calculated by adding the values of the individual permissions.
+
+|Value | Permisssion |
+|----------|----------|
+|4|Read Permission|
+|2|Write Permission|
+|1|Execute Permission|
+
+- 6 represent permission of file Owner which are (rw).
+- 7 represent permission of Group which are (rwx).
+- 4 represent permission of Other which is (r).
+ 
+
+  Example:-  chmod 674 [file_name]
+  Output:- 
 
 ### chown
     Description:- delete a group.

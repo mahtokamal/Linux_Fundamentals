@@ -636,9 +636,22 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 **--------------------------------------------------------------------------------------------------------------------**
 ## Permission & ownership
 ### chmod
-### chown
-### chgrp
+    Description:- change file mode bits.
+    
+    Example:- sudo groupdel cybersecurity
+    Output:- 
 
+### chown
+    Description:- delete a group.
+    
+    Example:- sudo groupdel cybersecurity
+    Output:- 
+
+### chgrp
+    Description:- delete a group.
+    
+    Example:- sudo groupdel cybersecurity
+    Output:- 
 
 **--------------------------------------------------------------------------------------------------------------------**
 ## Process Management

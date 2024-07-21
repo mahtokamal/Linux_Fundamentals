@@ -641,6 +641,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 **Modes in chmod Command**
 1. Symbolic Mode
 The following operators can be used with the symbolic mode:
+
 |Operators |Definition |
 |----------|----------|
 |`+`|Add permissions|
@@ -693,7 +694,7 @@ Read and write for Owner, and Read-only for the group and other: <br>
 - 4 represent permission of Other which is (r).
  
 
-  Example:-  chmod 674 [file_name]
+  Example:-  chmod 674 [file_name] <br>
   Output:- 
 
 ### chown

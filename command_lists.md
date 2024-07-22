@@ -665,8 +665,10 @@ The following Reference that are used:
 
 Examples of Using the Symbolic mode: <br>
 Read, write and execute permissions to the file owner: <br>
-Ex:- chmod u+rwx [file_name] <br>
-output:- <br>
+
+Permissiion(before chmod) :-rw-rw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+Ex:- chmod u+rwx t1.txt <br>
+output:- -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
 
 Remove write permission for the group and others: <br>
 Ex:- chmod go-w [file_name] <br>

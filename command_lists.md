@@ -666,17 +666,20 @@ The following Reference that are used:
 Examples of Using the Symbolic mode: <br>
 Read, write and execute permissions to the file owner: <br>
 
-Permissiion(before chmod) :-rw-rw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
-Ex:- chmod u+rwx t1.txt <br>
-output:- -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+**Permissiion(before chmod) :-** rw-rw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+**Ex:-** chmod u+rwx t1.txt <br>
+**output:-** -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
 
 Remove write permission for the group and others: <br>
-Ex:- chmod go-w [file_name] <br>
-output:-  <br>
+**Permissiion(before chmod) :-** -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+**Ex:-** chmod go-w t1.txt <br>
+**output:-** -rwxr--r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
 
 Read and write for Owner, and Read-only for the group and other: <br>
- Ex:- chmod u+rw,go+r [file_name] <br>
- 
+**Permissiion(before chmod) :-** -rwxr--r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+**Ex:-** chmod u+rw,go+r t1.txt <br>
+**output:-** -rw-r--r-- 1  kamal kamal   27 Mar  9 07:32 t1.txt <br>
+
 2. Octal Mode
  - First digit specify the permission for Owner.
  - Second digit specify the permission for Group. 
@@ -695,21 +698,50 @@ Read and write for Owner, and Read-only for the group and other: <br>
 - 7 represent permission of Group which are (rwx).
 - 4 represent permission of Other which is (r).
  
+**Permissiion(before chmod) :-** -r--r--r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
 
-  Example:-  chmod 674 [file_name] <br>
-  Output:- 
+  Example:-  chmod 674 t1.txt <br>
+  Output:-  -rw-rwxr-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
 
 ### chown
-    Description:- delete a group.
-    
-    Example:- sudo groupdel cybersecurity
-    Output:- 
+    Description:- change file owner and group. This command is particularly useful in scenarios where administrators need 
+    to grant or revoke access to specific resources.
+
+**Syntax of chown Command in Linux** <br>
+The chown command in Linux has the following syntax: <br>
+
+**chown [options] new_owner[:new_group] file(s)** <br>
+Here’s a breakdown of the components: <br>
+
+- `chown`: The base command.
+- `options`: Optional flags that modify the behavior of the `chown` command.
+- `new_owner[:new_group]`: The new owner and optionally the new group. If `new_group` is omitted, only the owner is changed.
+- `file(s)`: The file or files for which ownership is to be changed.
+
+**ownership(before chown) :-** -rw-rwxr-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+
+To Change the owner of a file in Linux <br>
+Syntax:- chown owner_name file_name <br>
+Example:- sudo chown sachin t1.txt <br>
+Output:-  -rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 t1.txt <br>
+
+To change the group ownership of a file <br>
+Syntax:- chown owner_name file_name <br>
+Example:- sudo chown :group1 file1.txt t1.txt <br>
+Output:-  -rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 t1.txt <br>
+
+to Change Owner and Group of the File simultaneously <br>
+Syntax:- chown master:group1 file1.txt
 
 ### chgrp
-    Description:- delete a group.
+    Description:- change group ownership. The `chgrp` command in Linux is used to change the group ownership of a file or 
+    directory. All files in Linux belong to an owner and a group. You can set the owner by using “chown” command, and the 
+    group by the “chgrp” command.
     
-    Example:- sudo groupdel cybersecurity
-    Output:- 
+**Group(before chgrp) :-**-rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 t1.txt <br>
+
+Example:- sudo chgrp sachin t1.txt
+Output:- -rw-rwxr-- 1 sachin sachin   27 Mar  9 07:32 t1.txt <br>
 
 **--------------------------------------------------------------------------------------------------------------------**
 ## Process Management

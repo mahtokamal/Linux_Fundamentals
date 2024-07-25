@@ -746,6 +746,10 @@ Output:- -rw-rwxr-- 1 sachin sachin   27 Mar  9 07:32 t1.txt <br>
 **--------------------------------------------------------------------------------------------------------------------**
 ## Process Management
 ### ps
+    Description:- report a snapshot of the current processes.
+
+    Example:-
+    Output:-
 ### top
 ### kill
 ### nice

@@ -839,18 +839,17 @@ In the top command, you can kill a process using the k key followed by entering 
 ### kill
     Description:- send a signal to a process.
 
-    Example:- kill
-    Output:-   PID TTY          TIME CMD
-              75154 pts/0    00:00:00 bash
-              76093 pts/0    00:00:00 ps
+    Example:- kill 76789 (76789 is PID, which is a process id)
+    Output:-  
 
 ### nice
-    Description:- report a snapshot of the current processes.
+    Description:-run a program with modified scheduling priority.
 
     Example:- ps
     Output:-   PID TTY          TIME CMD
               75154 pts/0    00:00:00 bash
               76093 pts/0    00:00:00 ps
+### renice
 
 ### systemctl
     Description:- report a snapshot of the current processes.

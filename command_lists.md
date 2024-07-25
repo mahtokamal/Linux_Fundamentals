@@ -748,15 +748,128 @@ Output:- -rw-rwxr-- 1 sachin sachin   27 Mar  9 07:32 t1.txt <br>
 ### ps
     Description:- report a snapshot of the current processes.
 
-    Example:-
-    Output:-
+    Example:- ps
+    Output:-   PID TTY          TIME CMD
+              75154 pts/0    00:00:00 bash
+              76093 pts/0    00:00:00 ps
+
+    Example:- ps -A or ps -e(to view all running process)
+    Output:-   PID TTY          TIME CMD
+               1    ?        00:01:36 systemd
+               2    ?        00:00:00 kthreadd
+               3    ?        00:00:00 rcu_gp
+               4    ?        00:00:00 rcu_par_gp
+               5    ?        00:00:00 slub_flushwq
+               6    ?        00:00:00 netns
+
+
+
+Result contains four columns of information. Where, 
+- PID:- the unique process ID 
+- TTY:- terminal type that the user is logged into 
+- TIME:- amount of CPU in minutes and seconds that the process has been running 
+- CMD:- name of the command that launched the process. 
+
+    
+
 ### top
+    Description:- Display Linux processes. It provides a dynamic real-time view of the running system. Usually, this 
+    command shows the summary information of the system and the list of processes or threads which are currently managed by 
+    the Linux Kernel. As soon as you will run this command it will open an interactive command mode where the top half 
+    portion will contain the statistics of processes and resource usage. And Lower half contains a list of the currently 
+    running processes. Pressing q will simply exit the command mode.
+
+    Example:- top -v
+    Output:-  procps-ng 3.3.17
+    Usage:
+      top -hv | -bcEeHiOSs1 -d secs -n max -u|U user -p pid(s) -o field -w [cols]
+
+Example:- top <br>
+Output:-  <br>
+
+top - 05:01:19 up 14:05,  1 user,  load average: 0.30, 0.27, 0.30 <br>
+Tasks: 286 total,   1 running, 285 sleeping,   0 stopped,   0 zombie <br>
+%Cpu(s):  4.1 us,  1.9 sy,  0.0 ni, 93.7 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st <br>
+MiB Mem :   3870.6 total,    322.0 free,   1126.6 used,   2422.1 buff/cache <br>
+MiB Swap:   2140.0 total,   2139.5 free,      0.5 used.   2415.9 avail Mem  <br>
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  <br>
+   1719 kamal     20   0 4464628 297848 135508 S   7.2   7.5  25:48.90 gnome-s+  <br>
+  73906 root      20   0       0      0      0 I   1.6   0.0   0:20.81 kworker+  <br>
+  75128 kamal     20   0  628328  53580  41272 S   1.6   1.4   0:13.93 gnome-t+  <br>
+  76369 kamal     20   0   13216   4224   3456 R   1.3   0.1   0:00.54 top       <br>
+  76251 root      20   0       0      0      0 I   1.0   0.0   0:07.66 kworker+  <br>
+    749 root      20   0  317440   9212   7676 S   0.7   0.2   8:28.53 vmtoolsd  <br>
+   2013 kamal     20   0  216988  41260  30124 S   0.7   1.0   6:57.85 vmtoolsd  <br>
+  27263 systemd+  20   0   14836   6912   6144 S   0.3   0.2   5:07.56 systemd+  <br>
+  76095 root      20   0       0      0      0 I   0.3   0.0   0:00.42 kworker+  <br>
+      1 root      20   0  168004  13312   8320 S   0.0   0.3   1:36.16 systemd   <br>
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.30 kthreadd  <br>
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    <br>
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+  <br>
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+  <br>
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns     <br>
+     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+  <br>
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+  <br>
+
+
+- PID: Shows task’s unique process id.
+- PR: The process’s priority. The lower the number, the higher the priority.
+- VIRT: Total virtual memory used by the task.
+- USER: User name of owner of task.
+- %CPU: Represents the CPU usage.
+- TIME+: CPU Time, the same as ‘TIME’, but reflecting more granularity through hundredths of a second.
+- SHR: Represents the Shared Memory size (kb) used by a task.
+- NI: Represents a Nice Value of task. A Negative nice value implies higher priority, and positive Nice value means lower priority.
+- %MEM: Shows the Memory usage of task.
+- RES: How much physical RAM the process is using, measured in kilobytes.
+- COMMAND: The name of the command that started the process
+
+
+**Kill a Process with top** <br>
+In the top command, you can kill a process using the k key followed by entering the PID (Process ID) of the process you want to terminate. Here’s how you can do it: <br>
+
+1. Start top by typing top in your terminal. 
+2. Locate the process you want to kill using the arrow keys to navigate through the process list.
+3. Note down the PID (Process ID) of the process.
+4. Press k on your keyboard.
+5. Enter the PID of the process you want to kill and press Enter.
+6. Confirm the action if prompted.
+
 ### kill
+    Description:- send a signal to a process.
+
+    Example:- kill
+    Output:-   PID TTY          TIME CMD
+              75154 pts/0    00:00:00 bash
+              76093 pts/0    00:00:00 ps
+
 ### nice
+    Description:- report a snapshot of the current processes.
+
+    Example:- ps
+    Output:-   PID TTY          TIME CMD
+              75154 pts/0    00:00:00 bash
+              76093 pts/0    00:00:00 ps
+
 ### systemctl
+    Description:- report a snapshot of the current processes.
+
+    Syntax:- kill [signal] PID
+    PID = The `kill` command requires the process ID (PID) of the process we want to terminate.
+    [signal] = We have to specify the signal and if we don’t specify the signal, the default signal `TERM` is sent to 
+    terminate the process
+
+    Example:- ps
+    Output:-   PID TTY          TIME CMD
+              75154 pts/0    00:00:00 bash
+              76093 pts/0    00:00:00 ps
+
 ### bg
+
 ### fg
 **----------------------------------------------------------------------------------------------------------------------**
+
 ## Disk Space Usage
 ### df
 ### du

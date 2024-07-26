@@ -793,24 +793,24 @@ Tasks: 286 total,   1 running, 285 sleeping,   0 stopped,   0 zombie <br>
 MiB Mem :   3870.6 total,    322.0 free,   1126.6 used,   2422.1 buff/cache <br>
 MiB Swap:   2140.0 total,   2139.5 free,      0.5 used.   2415.9 avail Mem  <br>
 
-    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  <br>
-   1719 kamal     20   0 4464628 297848 135508 S   7.2   7.5  25:48.90 gnome-s+  <br>
-  73906 root      20   0       0      0      0 I   1.6   0.0   0:20.81 kworker+  <br>
-  75128 kamal     20   0  628328  53580  41272 S   1.6   1.4   0:13.93 gnome-t+  <br>
-  76369 kamal     20   0   13216   4224   3456 R   1.3   0.1   0:00.54 top       <br>
-  76251 root      20   0       0      0      0 I   1.0   0.0   0:07.66 kworker+  <br>
-    749 root      20   0  317440   9212   7676 S   0.7   0.2   8:28.53 vmtoolsd  <br>
-   2013 kamal     20   0  216988  41260  30124 S   0.7   1.0   6:57.85 vmtoolsd  <br>
-  27263 systemd+  20   0   14836   6912   6144 S   0.3   0.2   5:07.56 systemd+  <br>
-  76095 root      20   0       0      0      0 I   0.3   0.0   0:00.42 kworker+  <br>
-      1 root      20   0  168004  13312   8320 S   0.0   0.3   1:36.16 systemd   <br>
-      2 root      20   0       0      0      0 S   0.0   0.0   0:00.30 kthreadd  <br>
-      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    <br>
-      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+  <br>
-      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+  <br>
-      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns     <br>
-     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+  <br>
-     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+  <br>
+PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  <br>
+1719 kamal     20   0 4464628 297848 135508 S   7.2   7.5  25:48.90 gnome-s+  <br>
+73906 root      20   0       0      0      0 I   1.6   0.0   0:20.81 kworker+  <br>
+75128 kamal     20   0  628328  53580  41272 S   1.6   1.4   0:13.93 gnome-t+  <br>
+76369 kamal     20   0   13216   4224   3456 R   1.3   0.1   0:00.54 top       <br>
+76251 root      20   0       0      0      0 I   1.0   0.0   0:07.66 kworker+  <br>
+749 root      20   0  317440   9212   7676 S   0.7   0.2   8:28.53 vmtoolsd  <br>
+2013 kamal     20   0  216988  41260  30124 S   0.7   1.0   6:57.85 vmtoolsd  <br>
+27263 systemd+  20   0   14836   6912   6144 S   0.3   0.2   5:07.56 systemd+  <br>
+76095 root      20   0       0      0      0 I   0.3   0.0   0:00.42 kworker+  <br>
+    1 root      20   0  168004  13312   8320 S   0.0   0.3   1:36.16 systemd   <br>
+    2 root      20   0       0      0      0 S   0.0   0.0   0:00.30 kthreadd  <br>
+    3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    <br>
+    4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+  <br>
+    5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+  <br>
+    6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns     <br>
+    11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+  <br>
+    12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+  <br>
 
 
 - PID: Shows task’s unique process id.
@@ -850,9 +850,15 @@ In the top command, you can kill a process using the k key followed by entering 
               75154 pts/0    00:00:00 bash
               76093 pts/0    00:00:00 ps
 ### renice
+    Description:-run a program with modified scheduling priority.
 
+    Example:- ps
+    Output:-   PID TTY          TIME CMD
+              75154 pts/0    00:00:00 bash
+              76093 pts/0    00:00:00 ps
+    
 ### systemctl
-    Description:- report a snapshot of the current processes.
+    Description:- Control the systemd system and service manager.
 
     Syntax:- kill [signal] PID
     PID = The `kill` command requires the process ID (PID) of the process we want to terminate.

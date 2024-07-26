@@ -843,32 +843,91 @@ In the top command, you can kill a process using the k key followed by entering 
     Output:-  
 
 ### nice
-    Description:-run a program with modified scheduling priority.
+    Description:- run a program with modified scheduling priority. nice command in Linux helps in execution of a 
+    program/process with modified scheduling priority. It launches a process with a user-defined scheduling priority. In 
+    this, if we give a process a higher priority, then Kernel will allocate more CPU time to that process.
 
     Example:- ps
     Output:-   PID TTY          TIME CMD
               75154 pts/0    00:00:00 bash
               76093 pts/0    00:00:00 ps
+
+1. To check the nice value of a process. 
+Example:- ps -el | grep terminal
+Output:- 0 S  1000   77289    1540  1  80   0 - 140768 do_pol ?       00:00:05 gnome-terminal-
+
+2. To set the priority of a process.
+Example:- nice -10 gnome-terminal
+Output:- 
+
+3. To set the negative priority for a process
+Example:- nice --10 gnome-terminal
+Output:-  
+
 ### renice
-    Description:-run a program with modified scheduling priority.
+    Description:- alter priority of running processes. renice command allows you to change and modify the scheduling 
+    priority of an already running process.
 
-    Example:- ps
-    Output:-   PID TTY          TIME CMD
-              75154 pts/0    00:00:00 bash
-              76093 pts/0    00:00:00 ps
-    
+1. changing priority of the running process.
+   Example:- ps -el | grep terminal
+   Output:- 0 S  1000   77289    1540  1  80   0 - 140864 do_pol ?       00:00:19 gnome-terminal-
+
+   Example:- renice -n 15 -p 77289
+   Output:- 77289 (process ID) old priority 0, new priority 15
+
+   Example:- ps -el | grep terminal
+   Outpu:- 0 S  1000   77289    1540  1  95  15 - 140864 do_pol ?       00:00:20 gnome-terminal-
+
+2. To change the priority of all programs of a specific group.
+   Example:- sudo renice -n 10 -g 1
+   Output:- 1 (process group ID) old priority 15, new priority 10
+
+3. To change the priority of all programs of a specific user. 
+   Example:- sudo renice -n 10 -u 0
+   Output:- 0 (user ID) old priority -20, new priority 10
+
 ### systemctl
     Description:- Control the systemd system and service manager.
+Syntax:- systemctl [command] [service] <br>
 
-    Syntax:- kill [signal] PID
-    PID = The `kill` command requires the process ID (PID) of the process we want to terminate.
-    [signal] = We have to specify the signal and if we don’t specify the signal, the default signal `TERM` is sent to 
-    terminate the process
+[command] = The action we want to perform (start, stop, enable, disable, etc.) <br>
 
-    Example:- ps
-    Output:-   PID TTY          TIME CMD
-              75154 pts/0    00:00:00 bash
-              76093 pts/0    00:00:00 ps
+[service] = The name of the service we want to perform the action on. <br>
+
+1. Starting and Stopping Services
+   Example:- systemctl start sshd (starts SSH service)
+   Output:-
+   Example:- systemctl stop sshd 
+
+3. Enabling and Disabling Service
+   Example:- systemctl enable firewalld
+   Output:-
+   Exampe:- systemctl disable firewalld
+
+5. Viewing the Staus of Services
+   Example:-
+   Output:- 
+
+6. Restarting and Reloading Services
+   Example:-
+   Output:- 
+
+7. Masking and Unmasking Services
+   Example:-
+   Output:- 
+
+8. Changing the Default Target
+    Example:-
+    Output:- 
+
+9. Listing Unit Files
+    Example:-
+    Output:- 
+
+10. Masking and Unmasking Unit Files
+    Example:-
+    Output:- 
+
 
 ### bg
 

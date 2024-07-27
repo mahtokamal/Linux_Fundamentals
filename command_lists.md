@@ -894,40 +894,42 @@ Syntax:- systemctl [command] [service] <br>
 
 [service] = The name of the service we want to perform the action on. <br>
 
-1. Starting and Stopping Services
-   Example:- systemctl start sshd (starts SSH service)
-   Output:-
-   Example:- systemctl stop sshd 
+1. Starting and Stopping Services <br>
+   Example:- systemctl start sshd (starts SSH service)  <br>
+   Output:- <br>
+   Example:- systemctl stop sshd <br>
 
-3. Enabling and Disabling Service
-   Example:- systemctl enable firewalld
-   Output:-
-   Exampe:- systemctl disable firewalld
+3. Enabling and Disabling Service <br>
+   Example:- systemctl enable firewalld <br>
+   Output:- <br>
+   Exampe:- systemctl disable firewalld <br>
 
-5. Viewing the Staus of Services
-   Example:-
-   Output:- 
+5. Viewing the Staus of Services <br>
+   Example:- systemctl status firewalld <br>
+   Output:- <br>
 
-6. Restarting and Reloading Services
-   Example:-
-   Output:- 
+6. Restarting and Reloading Services <br>
+   Example:- systemctl restart sshd<br>
+   Output:-  <br>
+   Example:- systemctl reload httpd <br>
 
-7. Masking and Unmasking Services
-   Example:-
-   Output:- 
+7. Masking and Unmasking Services <br>
+   Example:- systemctl mask mysqld<br>
+   Output:-  <br>
+   Example:- systemctl unmask mysqld <br>
 
-8. Changing the Default Target
-    Example:-
-    Output:- 
+8. Changing the Default Target <br>
+    Example:- systemctl set-default graphical.target<br>
+    Output:-  <br>
 
-9. Listing Unit Files
-    Example:-
-    Output:- 
+9. Listing Unit Files <br>
+    Example:- systemctl list-unit-files<br>
+    Output:-  <br>
 
-10. Masking and Unmasking Unit Files
-    Example:-
-    Output:- 
-
+10. Masking and Unmasking Unit Files <br>
+    Example:- systemctl mask sshd.service<br>
+    Output:-  <br>
+    Example:- systemctl unmask sshd.service <br>
 
 ### bg
 

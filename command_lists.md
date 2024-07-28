@@ -948,35 +948,144 @@ Syntax:- systemctl [command] [service] <br>
 ### man
     Description - an interface to the system reference manuals or macros to format man pages.
     
-    Example - man ls
+    Example:- man ls
     (present manual interface for respective commands along with use cases).
+
 ### whoami
+    Description - Print  the  user  name  associated  with the current effective user ID. Same as id -un..
+    
+    Example:- whoami
+    Output:- kamal
+
 ### clear
-### history [!12]
+    Description - clear the terminal screen.
+    
+    Example:- clear
+    Output:- 
+
+### history
+    Description - GNU History Library.
+    
+    Example:- history
+    Output:- 1934  man whoami
+             1935  whoami
+             1936  man clear
+             1937  clear
+             1938  man history 
+             1939  history
+
+    then press !1935 (to run whoami command that stored with id 1935 in GNU History library).
+
 ### reboot
+    Description - Halt, power-off or reboot the machine.
+    
+    Example - sudo reboot
+
 ### shutdown
+    Description - Halt, power-off or reboot the machine.
+    
+    Example - sudo shutdown now
+
 ### whatis
+    Description - display one-line manual page descriptions.
+    
+    Example:- wahtis whatis (whatis whoami)
+    Output:- 
+
 ### date
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example:- date
+    Output:- Sunday 28 July 2024 05:42:01 AM IST
+
 ### time
+    Description - run programs and summarize system resource usage.
+    
+    Example:- time
+    Output:- real	0m0.000s
+             user	0m0.000s
+             sys	0m0.000s
+
 ### help
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### uname
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### whereis
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### which
-### hostname
-### host google.com
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### expr
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### bash --version
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### cal 2024
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### echo > and >>
-### ping google.com
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
 ### bc
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### info echo
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
 ### ln test1.txt testhardlinks
+     Description - an interface to the system reference manuals or macros to format man pages.
+    
+     Example - man ls   
+
 ### ln -s test1.txt softlinks
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### directory loop
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### type pwd
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### wildcards
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### alias
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
+
 ### absolute VS realtive path
-### chmod
+    Description - an interface to the system reference manuals or macros to format man pages.
+    
+    Example - man ls
 

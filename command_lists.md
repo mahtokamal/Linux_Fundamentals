@@ -993,7 +993,7 @@ Syntax:- systemctl [command] [service] <br>
     Output:- 
 
 ### date
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - print or set the system date and time.
     
     Example:- date
     Output:- Sunday 28 July 2024 05:42:01 AM IST
@@ -1007,85 +1007,148 @@ Syntax:- systemctl [command] [service] <br>
              sys	0m0.000s
 
 ### help
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - It helps us to learn about any built-in command.
     
-    Example - man ls
+    Example - cd --help
 
 ### uname
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - print system information.
     
-    Example - man ls
+    Example - uname
+    Output - Linux
+
+    Example - uname -a or --all (print  all  information)
+    Output -  Linux Ubuntu 6.5.0-28-generic #29~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  4 14:39:20 UTC 2 x86_64 x86_64 
+    x86_64 GNU/Linux
+
+    Example - uname -o
+    Output - GNU/Linux
+
+    Example - 
+
 
 ### whereis
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - locate the binary, source, and manual page files for a command.
     
-    Example - man ls
+    Example - whereis mkdir
+    Output - mkdir: /usr/bin/mkdir /usr/share/man/man1/mkdir.1.gz
 
 ### which
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - locate a command.
     
-    Example - man ls
+    Example - which mkdir
+    Output - /usr/bin/mkdir
 
 ### expr
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - evaluate expressions.
     
-    Example - man ls
+    Example - expr expr 7 + 6
+    Output:- 13
 
 ### bash --version
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - GNU Bourne-Again SHell.
     
-    Example - man ls
+    Example - bash --version
+    Outpu - bash --version
+            GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+            Copyright (C) 2020 Free Software Foundation, Inc.
+            License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+            
+            This is free software; you are free to change and redistribute it.
+            There is NO WARRANTY, to the extent permitted by law.
 
 ### cal 2024
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - cal, ncal — displays a calendar and the date of Easter.
     
-    Example - man ls
+    Example - cal
+    Output - cal
+        July 2024        
+        Su Mo Tu We Th Fr Sa  
+            1  2  3  4  5  6  
+         7  8  9 10 11 12 13  
+        14 15 16 17 18 19 20  
+        21 22 23 24 25 26 27  
+        28 29 30 31 
+
+    Example - cal 09 2024
+    Output - al 09 2024
+           September 2024     
+        Su Mo Tu We Th Fr Sa  
+         1  2  3  4  5  6  7  
+         8  9 10 11 12 13 14  
+        15 16 17 18 19 20 21  
+        22 23 24 25 26 27 28  
+        29 30               
 
 ### echo > and >>
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - display a line of text.
     
-    Example - man ls
+    Example - echo
+    Output - echo hello
+            hello
+    
+    Example - echo hello! > tests.txt (> used for overwriting and replacing the existing texts)
+    Output  - (it will create a file tests.txt and overwrite hello into that file) 
+    echo hello! > tests.txt
+
+    Example - echo hi! >> tests.txt (>> used for appeding at the end of file)
+    Output - (it will create a file tests.txt and appends the test "hi!" into that file) 
+    echo hi! > tests.txt
+
 ### bc
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - An arbitrary precision calculator language.
     
-    Example - man ls
+    Example - bc
+    Output - bc
+        bc 1.07.1
+        Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+        This is free software with ABSOLUTELY NO WARRANTY.
+        For details type `warranty'. 
+        5 + 6 (you have to enter the expression and it shows the result)
+        11
+        8 % 3 (give you remainder of given expression)
+        2
+
 
 ### info echo
     Description - an interface to the system reference manuals or macros to format man pages.
     
     Example - man ls
-### ln test1.txt testhardlinks
-     Description - an interface to the system reference manuals or macros to format man pages.
-    
-     Example - man ls   
+### ln
+     hardlinks
+     Description - make links between files.
 
-### ln -s test1.txt softlinks
-    Description - an interface to the system reference manuals or macros to format man pages.
-    
-    Example - man ls
+     hardlinks
+     Example - ln test1.txt hardlinks
+     Output - 
+
+     softlinks
+     Example - ln -s test1.txt softlinks
+     Output - 
+
 
 ### directory loop
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - .
     
     Example - man ls
 
 ### type pwd
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - .
     
     Example - man ls
 
 ### wildcards
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - .
     
     Example - man ls
 
 ### alias
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - s.
     
     Example - man ls
 
 ### absolute VS realtive path
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - .
     
     Example - man ls
 

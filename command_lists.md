@@ -1114,18 +1114,31 @@ Syntax:- systemctl [command] [service] <br>
     Description - an interface to the system reference manuals or macros to format man pages.
     
     Example - man ls
+
 ### ln
      hardlinks
      Description - make links between files.
 
      hardlinks
-     Example - ln test1.txt hardlinks
+     Example - ln k1.txt hardlinksexamples
      Output - 
 
-     softlinks
-     Example - ln -s test1.txt softlinks
+     softlinks (symbolic links)
+     Example - ln -s k1.txt softlinksexamples
      Output - 
 
+     1180913 -rw-rw-r-- 2 kamal kamal   56 Jul 15 05:01 hardlinksexamples
+        1180913 -rw-rw-r-- 2 kamal kamal   56 Jul 15 05:01 k1.txt
+        1185130 drwxrwxr-x 2 kamal kamal 4096 Jul 30 19:47 kam2
+        1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_commands
+        1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_hardlinks
+        1186958 lrwxrwxrwx 1 kamal kamal   14 Feb 25 09:07 linux_softlinks -> linux_commands
+        1185159 lrwxrwxrwx 1 kamal kamal    6 Jul 30 19:44 softlinksexamples -> k1.txt
+        1185132 -rw-rw-r-- 1 kamal kamal 2190 Jul 14 04:55 zipfile.zip
+
+![Screenshot (382)](https://github.com/user-attachments/assets/90ffab28-5438-4811-af29-0c28b6305ef1)
+
+![Screenshot (383)](https://github.com/user-attachments/assets/738f354f-d860-4252-9118-adf40d7a1d40)
 
 ### directory loop
     Description - .

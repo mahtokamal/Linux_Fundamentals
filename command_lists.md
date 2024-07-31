@@ -1080,7 +1080,7 @@ Syntax:- systemctl [command] [service] <br>
         22 23 24 25 26 27 28  
         29 30               
 
-### echo > and >>
+### echo
     Description - display a line of text.
     
     Example - echo
@@ -1111,9 +1111,12 @@ Syntax:- systemctl [command] [service] <br>
 
 
 ### info echo
-    Description - an interface to the system reference manuals or macros to format man pages.
+    Description - It reads documentation in the info format. It will give detailed information for a command when compared 
+    with the man page. The pages are made using the texinfo tools because of which it can link with other pages, create 
+    menus and easy navigation.
     
-    Example - man ls
+    Syntax - info [OPTION]... [MENU-ITEM...]
+    Example - 
 
 ### ln
      hardlinks
@@ -1161,7 +1164,7 @@ Syntax:- systemctl [command] [service] <br>
     Example - man ls
 
 ### absolute VS realtive path
-    Description - .
+    absolute path - .
     
-    Example - man ls
+    relative path - 
 

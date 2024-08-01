@@ -1116,7 +1116,16 @@ Syntax:- systemctl [command] [service] <br>
     menus and easy navigation.
     
     Syntax - info [OPTION]... [MENU-ITEM...]
-    Example - 
+    Example - info dir
+    Output -
+
+![Screenshot (384)](https://github.com/user-attachments/assets/24147b7b-d257-486a-8266-cb841a5a8662)
+
+    
+    Example - info ls
+    Output -
+
+![Screenshot (385)](https://github.com/user-attachments/assets/4f62b5d4-db1a-456f-a369-311754a1a7da)
 
 ### ln
      hardlinks

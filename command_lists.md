@@ -1163,7 +1163,7 @@ Syntax:- systemctl [command] [service] <br>
     Example - man ls
 
 ### wildcards
-    Description - .
+    Description - Given a text and a     wildcard pattern, implement  wildcard pattern matching algorithm that finds if wildcard pattern is matched with text. The matching should cover the entire text (not partial text). The wildcard pattern can include the characters ‘?’ and ‘*’. 
     
     Example - man ls
 

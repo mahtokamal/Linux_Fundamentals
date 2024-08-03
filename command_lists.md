@@ -1163,17 +1163,41 @@ Syntax:- systemctl [command] [service] <br>
     Example - man ls
 
 ### wildcards
-    Description - Given a text and a     wildcard pattern, implement  wildcard pattern matching algorithm that finds if wildcard pattern is matched with text. The matching should cover the entire text (not partial text). The wildcard pattern can include the characters ‘?’ and ‘*’. 
+    Description - Given a text and a wildcard pattern, implement  wildcard pattern matching algorithm that finds if 
+    wildcard pattern is matched with text. The matching should cover the entire text (not partial text).
+    The wildcard pattern can include the characters ‘?’ and ‘*’. 
     
     Example - man ls
 
 ### alias
-    Description - s.
+    Description - before making your own command just check whether it is shell builtin or not, if it's builtin then we 
+    can't make aliases. 
+
+    type test type invent
+    alias invent="cd Desktop;mkdir dir2;touch hello.txt;date;cal"
+
+   alias copy="cp" alias rename="mv"
+
+   alias del ="rm -i" unalias del
+
+  cd ~ ls -a goto .bashrc gedit .bashrc open it then paste your alias command to save it indefinite time #some more user created aliases alias del ="rm -i"
+
+alias.
     
     Example - man ls
-
+> [!NOTE]
+> 
+ 
 ### absolute VS realtive path
-    absolute path - .
+    absolute path - An absolute path specifies the location of a file or directory from the root directory (/). It always 
+    starts with a /, indicating the root directory, and provides the full path to the file or directory..
+
+
     
-    relative path - 
+    relative path - A relative path specifies the location of a file or directory in relation to the current working 
+    directory. It does not start with a /. Instead, it starts from the current directory or a directory relative to the 
+    current one.
+
+    .(a single dot) - this represents the current directory.
+    ..(two dots) - this represents the parent directory. 
 

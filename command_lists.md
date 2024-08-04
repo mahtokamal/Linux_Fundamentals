@@ -1185,13 +1185,12 @@ Syntax:- systemctl [command] [service] <br>
 alias.
     
     Example - man ls
-> [!NOTE]
-> 
  
 ### absolute VS realtive path
     absolute path - An absolute path specifies the location of a file or directory from the root directory (/). It always 
     starts with a /, indicating the root directory, and provides the full path to the file or directory..
 
+![Screenshot (386)](https://github.com/user-attachments/assets/efa59b5a-ebbc-47f6-a6c5-a97263c8d363)
 
     
     relative path - A relative path specifies the location of a file or directory in relation to the current working 
@@ -1201,3 +1200,4 @@ alias.
     .(a single dot) - this represents the current directory.
     ..(two dots) - this represents the parent directory. 
 
+![Screenshot (387)](https://github.com/user-attachments/assets/977e2098-b225-4764-9910-b5b36ba58afd)

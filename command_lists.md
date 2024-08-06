@@ -1170,6 +1170,8 @@ Syntax:- systemctl [command] [service] <br>
     * – This wildcard represents all the characters
 ? – This wildcard represents a single character
 [] – This wildcard represents a range of characters.
+
+myfile-1.txt
     
     Example - man ls
 

@@ -1128,25 +1128,34 @@ Syntax:- systemctl [command] [service] <br>
 ![Screenshot (385)](https://github.com/user-attachments/assets/4f62b5d4-db1a-456f-a369-311754a1a7da)
 
 ### ln
-     hardlinks
      Description - make links between files.
 
-     hardlinks
+     hardlinks - Hard links in Linux are essentially additional names for an existing file on the filesystem.
+     Unlike soft links, hard links are indistinguishable from the file they link to because they are direct references to 
+     the inode (the data structure that stores file metadata, including its contents). Creating a hard link to a file does 
+     not use additional disk space for the contents of the file. When the original file is deleted, the data remains 
+     accessible through any of its hard links until all references (links) to the file are deleted.
+     
      Example - ln k1.txt hardlinksexamples
      Output - 
 
-     softlinks (symbolic links)
+     softlinks - Soft links, also known as symbolic links or symlinks, act as shortcuts(similar to Windows OS) or 
+     references to files and directories in Linux. Unlike hard links, soft links are not direct mirrors of the target 
+     files. Instead, they point to a specific path in the filesystem where the target files or directories reside. If the 
+     target file is moved or deleted, the soft link becomes a ‘dangling’ link, pointing to a non-existent file, which 
+     results in errors when accessed.
+     
      Example - ln -s k1.txt softlinksexamples
      Output - 
 
      1180913 -rw-rw-r-- 2 kamal kamal   56 Jul 15 05:01 hardlinksexamples
-        1180913 -rw-rw-r-- 2 kamal kamal   56 Jul 15 05:01 k1.txt
-        1185130 drwxrwxr-x 2 kamal kamal 4096 Jul 30 19:47 kam2
-        1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_commands
-        1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_hardlinks
-        1186958 lrwxrwxrwx 1 kamal kamal   14 Feb 25 09:07 linux_softlinks -> linux_commands
-        1185159 lrwxrwxrwx 1 kamal kamal    6 Jul 30 19:44 softlinksexamples -> k1.txt
-        1185132 -rw-rw-r-- 1 kamal kamal 2190 Jul 14 04:55 zipfile.zip
+     1180913 -rw-rw-r-- 2 kamal kamal   56 Jul 15 05:01 k1.txt
+     1185130 drwxrwxr-x 2 kamal kamal 4096 Jul 30 19:47 kam2
+     1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_commands
+     1186954 -rw-rw-r-- 2 kamal kamal 9078 Jul 12 04:40 linux_hardlinks
+     1186958 lrwxrwxrwx 1 kamal kamal   14 Feb 25 09:07 linux_softlinks -> linux_commands
+     1185159 lrwxrwxrwx 1 kamal kamal    6 Jul 30 19:44 softlinksexamples -> k1.txt
+     1185132 -rw-rw-r-- 1 kamal kamal 2190 Jul 14 04:55 zipfile.zip
 
 ![Screenshot (382)](https://github.com/user-attachments/assets/90ffab28-5438-4811-af29-0c28b6305ef1)
 
@@ -1193,15 +1202,15 @@ alias.
     Example - man ls
  
 ### absolute VS realtive path
-    absolute path - An absolute path specifies the location of a file or directory from the root directory (/). It always 
-    starts with a /, indicating the root directory, and provides the full path to the file or directory..
+    absolute path - An absolute path specifies the location of a file or directory from the root directory (/).
+    It always starts with a /, indicating the root directory, and provides the full path to the file or directory.
 
 ![Screenshot (386)](https://github.com/user-attachments/assets/efa59b5a-ebbc-47f6-a6c5-a97263c8d363)
 
     
     relative path - A relative path specifies the location of a file or directory in relation to the current working 
-    directory. It does not start with a /. Instead, it starts from the current directory or a directory relative to the 
-    current one.
+    directory. It does not start with a /.
+    Instead, it starts from the current directory or a directory relative to the current one.
 
     .(a single dot) - this represents the current directory.
     ..(two dots) - this represents the parent directory. 

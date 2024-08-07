@@ -1188,19 +1188,35 @@ myfile-1.txt
     Description - before making your own command just check whether it is shell builtin or not, if it's builtin then we 
     can't make aliases. 
 
-    type test type invent
-    alias invent="cd Desktop;mkdir dir2;touch hello.txt;date;cal"
-
-   alias copy="cp" alias rename="mv"
-
-   alias del ="rm -i" unalias del
-
-  cd ~ ls -a goto .bashrc gedit .bashrc open it then paste your alias command to save it indefinite time #some more user created aliases alias del ="rm -i"
-
-alias.
+    You can create your alias command in terminal. However, after existing terminal session is closed then you cannot use 
+    it.
     
-    Example - man ls
- 
+    alias copy="cp" 
+    unalias copy
+
+    cd ~(Home directory)
+    then type ls -a
+    next gedit .bashrc (to open it in text editor)
+    then paste your alias command and save it for indefinite time.
+    NOTE:- it is not recommended, so after making own alias command for learning purpose then delete it from (.bashrc 
+    file). 
+
+![Screenshot (395)](https://github.com/user-attachments/assets/0e1e9cae-50df-41ef-ba9e-56243e9f7c07)
+
+![Screenshot (396)](https://github.com/user-attachments/assets/fa37918e-4444-4ae4-bd15-0ff52ae89ab9)
+
+![Screenshot (391)](https://github.com/user-attachments/assets/e662d334-f254-4d3d-8448-c071c38e2023)
+
+![Screenshot (392)](https://github.com/user-attachments/assets/8df71317-2261-4184-a1e3-6e47ad0b2851)
+
+![Screenshot (388)](https://github.com/user-attachments/assets/0b79b314-d359-4e25-90c5-6529d83627b0)
+
+![Screenshot (389)](https://github.com/user-attachments/assets/44d098d0-e527-4b1c-aed0-f4ab36538ea4)
+
+![Screenshot (390)](https://github.com/user-attachments/assets/9f437df5-7c75-4d3f-86c2-36252593f742)
+
+![Screenshot (393)](https://github.com/user-attachments/assets/65b3f95b-3abf-42bb-84a5-314167bcabf4)
+
 ### absolute VS realtive path
     absolute path - An absolute path specifies the location of a file or directory from the root directory (/).
     It always starts with a /, indicating the root directory, and provides the full path to the file or directory.

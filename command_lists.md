@@ -1167,9 +1167,44 @@ Syntax:- systemctl [command] [service] <br>
     Example - man ls
 
 ### type pwd
-    Description - .
+    Description - The ‘type’ command in Linux is a built-in shell command used to identify the kind of command you are dealing with.
+    It helps you determine whether a command is an alias, a shell built-in, a file, or a function.
+
+    Syntax - type [Options] command names
     
-    Example - man ls
+    Options:
+    -a : This option is used to find out whether it is an alias, keyword or a function and it also displays the path of an executable, if available.
+    
+    Example - type -a ls
+    Output - 
+
+![Screenshot (399)](https://github.com/user-attachments/assets/c4901692-a6e3-497f-8f1d-64cc4191f4a2)
+
+
+    -t : This option will display a single word as an output.
+    alias – if command is a shell alias
+    keyword – if command is a shell reserved word
+    builtin – if command is a shell builtin
+    function – if command is a shell function
+    file – if command is a disk file
+
+    Example - type -t pwd
+              type -t cp
+              type -t ls
+              type -t while
+
+    Output -
+
+![Screenshot (397)](https://github.com/user-attachments/assets/b732abe0-cba0-44ab-afee-6d55dea65fb8)
+
+    -p : This option displays the name of the disk file which would be executed by the shell. It will return nothing if the command is not a disk file.
+
+    Example- type -p dash
+             type -p pwd
+
+    Output - 
+
+![Screenshot (401)](https://github.com/user-attachments/assets/75637b15-a2bb-4bb9-85b6-60757495f43b)
 
 ### wildcards
     Description - Given a text and a wildcard pattern, implement  wildcard pattern matching algorithm that finds if 

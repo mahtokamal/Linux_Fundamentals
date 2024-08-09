@@ -1220,8 +1220,36 @@ Syntax:- systemctl [command] [service] <br>
 
 ![Screenshot (402)](https://github.com/user-attachments/assets/7e256759-2570-470a-abac-08bd6461890e)
 
-    Example - ls ?.txt
-    Example - ls *.txt
+    Example - ls he*
+    Example - ls he*?o
+
+![Screenshot (403)](https://github.com/user-attachments/assets/23a0cac4-d5bd-4ccf-919b-d264eee2de35)
+
+    Example - ls [kam]*.txt
+    Example - ls [kam]*.???
+
+![Screenshot (404)](https://github.com/user-attachments/assets/c7c72247-d14a-46f4-bef3-7aa5abc2e81d)
+
+    Example - ls [!kam]*.txt or ls [^kam]*.txt
+    Example - ls [[:upper:]]*.txt
+    Example - ls [[:lower:]]*.txt
+    Example - ls [0-9]*.txt
+    Example - ls *[0-9]*.txt
+    Example - ls *[0-9].txt
+    Example - ls *[[:digit:]]
+    Example - ls *[[:digit:]].txt
+
+![Screenshot (405)](https://github.com/user-attachments/assets/b700b50d-e8b0-4b1a-867f-e094723179f7)
+
+![Screenshot (406)](https://github.com/user-attachments/assets/3902228b-cd43-4976-a9c7-2577f1956f4a)
+
+    Example - ls *[[:alpha:]]
+    Example - ls *[[:alpha:]].txt
+    Example - ls [[:alpha:]]*.txt
+    Example - ls [[:alnum:]]*.txt
+    Example - ls [[:digit:]]*[[:alpha:]].txt
+
+![Screenshot (407)](https://github.com/user-attachments/assets/ad61cd55-d25f-4619-8cb4-ecfff9cd21ec)
 
 ### alias
     Description - before making your own command just check whether it is shell builtin or not, if it's builtin then we 

@@ -1212,12 +1212,16 @@ Syntax:- systemctl [command] [service] <br>
     The wildcard pattern can include the characters ‘?’ and ‘*’. 
 
     * – This wildcard represents all the characters
-? – This wildcard represents a single character
-[] – This wildcard represents a range of characters.
+    ? – This wildcard represents a single character
+    [] – This wildcard represents a range of characters.
 
-myfile-1.txt
-    
-    Example - man ls
+    Example - ls ?.txt
+    Example - ls *.txt
+
+![Screenshot (402)](https://github.com/user-attachments/assets/7e256759-2570-470a-abac-08bd6461890e)
+
+    Example - ls ?.txt
+    Example - ls *.txt
 
 ### alias
     Description - before making your own command just check whether it is shell builtin or not, if it's builtin then we 

@@ -1161,10 +1161,17 @@ Syntax:- systemctl [command] [service] <br>
 
 ![Screenshot (383)](https://github.com/user-attachments/assets/738f354f-d860-4252-9118-adf40d7a1d40)
 
-### directory loop
-    Description - .
+### directory loop using symbolic(softlink) link
+    Description - to create a directory loop using symbolic link. First, make directory a/ then within a/ create another 
+    directoy b/ and within b/ we'll make symbolic link of directory b/ named it c(symbolic or shortuts of b). Thus, 
+    Looping will be created.
     
-    Example - man ls
+    Example - ln -s .. c (type this command on Terminal after going inside b/)
+
+![Screenshot (408)](https://github.com/user-attachments/assets/325d8c8a-a5ca-4b96-ac08-0f9bc59c0496)
+
+![Screenshot (409)](https://github.com/user-attachments/assets/e75cecda-2a91-4d16-bdff-394b55a43b6f)
+
 
 ### type pwd
     Description - The ‘type’ command in Linux is a built-in shell command used to identify the kind of command you are dealing with.

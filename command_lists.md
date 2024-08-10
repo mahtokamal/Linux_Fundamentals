@@ -967,14 +967,17 @@ Syntax:- systemctl [command] [service] <br>
     Description - GNU History Library.
     
     Example:- history
-    Output:- 1934  man whoami
-             1935  whoami
-             1936  man clear
-             1937  clear
-             1938  man history 
-             1939  history
+    Output:- 1998  whoami
+             1999  whoami --help
+             2000  clear
+             2001  whoami
+             2002  clear
+             2003  echo welcome to the Linux terminal
+             2004  clear
+             2005  history
 
-    then press !1935 (to run whoami command that stored with id 1935 in GNU History library).
+
+    then press !1998 (to run whoami command that stored with id 1998 in GNU History library).
 
 ### reboot
     Description - Halt, power-off or reboot the machine.
@@ -996,7 +999,8 @@ Syntax:- systemctl [command] [service] <br>
     Description - print or set the system date and time.
     
     Example:- date
-    Output:- Sunday 28 July 2024 05:42:01 AM IST
+    Output:- Saturday 10 August 2024 06:48:07 PM IST
+    
 
 ### time
     Description - run programs and summarize system resource usage.
@@ -1094,6 +1098,10 @@ Syntax:- systemctl [command] [service] <br>
     Example - echo hi! >> tests.txt (>> used for appeding at the end of file)
     Output - (it will create a file tests.txt and appends the test "hi!" into that file) 
     echo hi! > tests.txt
+
+    Example - echo hii! > tests.txt
+
+
 
 ### bc
     Description - An arbitrary precision calculator language.

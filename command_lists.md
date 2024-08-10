@@ -951,6 +951,9 @@ Syntax:- systemctl [command] [service] <br>
     Example:- man ls
     (present manual interface for respective commands along with use cases).
 
+![Screenshot (410)](https://github.com/user-attachments/assets/dcb669c8-c248-42ba-b9f6-6c31cdd1312e)
+
+
 ### whoami
     Description - Print  the  user  name  associated  with the current effective user ID. Same as id -un..
     

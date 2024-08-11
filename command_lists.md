@@ -960,11 +960,17 @@ Syntax:- systemctl [command] [service] <br>
     Example:- whoami
     Output:- kamal
 
+![Screenshot (411)](https://github.com/user-attachments/assets/8e31a8f4-ec1f-42d8-9976-507b191de956)
+
 ### clear
     Description - clear the terminal screen.
     
     Example:- clear
     Output:- 
+
+![Screenshot (412)](https://github.com/user-attachments/assets/ccb4b4da-67b6-40d8-a230-169aceaa75f6)
+
+![Screenshot (413)](https://github.com/user-attachments/assets/46bda0be-a07e-493e-a012-74a90cd995ec)
 
 ### history
     Description - GNU History Library.
@@ -982,15 +988,23 @@ Syntax:- systemctl [command] [service] <br>
 
     then press !1998 (to run whoami command that stored with id 1998 in GNU History library).
 
+![Screenshot (414)](https://github.com/user-attachments/assets/a5e316b0-8777-42c4-81d8-a1a4b22010d6)
+
 ### reboot
     Description - Halt, power-off or reboot the machine.
     
     Example - sudo reboot
 
+![Screenshot (416)](https://github.com/user-attachments/assets/5c109c4a-3771-4061-9bb8-f7c98a221516)
+
+![Screenshot (415)](https://github.com/user-attachments/assets/321c4d22-6730-4941-ac49-dd08dd08c0fd)
+
 ### shutdown
     Description - Halt, power-off or reboot the machine.
     
-    Example - sudo shutdown now
+    Example - sudo shutdown now (it'll prompt you to enter password thereafter it shutdowns the system)
+
+![Screenshot (417)](https://github.com/user-attachments/assets/278a7e4c-9017-40fe-8678-51b7c724b8e4)
 
 ### whatis
     Description - display one-line manual page descriptions.
@@ -998,12 +1012,15 @@ Syntax:- systemctl [command] [service] <br>
     Example:- wahtis whatis (whatis whoami)
     Output:- 
 
+![Screenshot (418)](https://github.com/user-attachments/assets/6e7784a7-5cb1-436e-849a-a067852e76a7)
+
 ### date
     Description - print or set the system date and time.
     
     Example:- date
     Output:- Saturday 10 August 2024 06:48:07 PM IST
     
+![Screenshot (419)](https://github.com/user-attachments/assets/8a6ba79d-5d05-40ef-9b5c-a651d89120d7)
 
 ### time
     Description - run programs and summarize system resource usage.
@@ -1013,10 +1030,14 @@ Syntax:- systemctl [command] [service] <br>
              user	0m0.000s
              sys	0m0.000s
 
+![Screenshot (420)](https://github.com/user-attachments/assets/f74903ab-6391-4701-a645-07496e53c0ce)
+
 ### help
     Description - It helps us to learn about any built-in command.
     
     Example - cd --help
+
+![Screenshot (421)](https://github.com/user-attachments/assets/deb4ec8d-f0ac-413f-a4c5-65784cdcde9d)
 
 ### uname
     Description - print system information.
@@ -1033,6 +1054,8 @@ Syntax:- systemctl [command] [service] <br>
 
     Example - 
 
+![Screenshot (422)](https://github.com/user-attachments/assets/3757d670-9da1-4ecd-b0ad-e682369e0b3a)
+
 
 ### whereis
     Description - locate the binary, source, and manual page files for a command.
@@ -1040,17 +1063,23 @@ Syntax:- systemctl [command] [service] <br>
     Example - whereis mkdir
     Output - mkdir: /usr/bin/mkdir /usr/share/man/man1/mkdir.1.gz
 
+![Screenshot (423)](https://github.com/user-attachments/assets/c7184196-1a62-440b-a92a-6e0dd6722e6b)
+
 ### which
     Description - locate a command.
     
     Example - which mkdir
     Output - /usr/bin/mkdir
 
+![Screenshot (424)](https://github.com/user-attachments/assets/74511b05-09d8-4064-bb17-474c39e76fb1)
+
 ### expr
     Description - evaluate expressions.
     
     Example - expr expr 7 + 6
     Output:- 13
+
+![Screenshot (425)](https://github.com/user-attachments/assets/2db719d3-d9f8-4ad8-85d5-49f6ef3fef1d)
 
 ### bash --version
     Description - GNU Bourne-Again SHell.
@@ -1063,6 +1092,8 @@ Syntax:- systemctl [command] [service] <br>
             
             This is free software; you are free to change and redistribute it.
             There is NO WARRANTY, to the extent permitted by law.
+
+![Screenshot (426)](https://github.com/user-attachments/assets/7d798669-004a-4fb0-9bb7-2e670917c640)
 
 ### cal 2024
     Description - cal, ncal — displays a calendar and the date of Easter.
@@ -1087,6 +1118,8 @@ Syntax:- systemctl [command] [service] <br>
         22 23 24 25 26 27 28  
         29 30               
 
+![Screenshot (427)](https://github.com/user-attachments/assets/416aacce-ef64-453c-beed-9d0f37eb5c03)
+
 ### echo
     Description - display a line of text.
     
@@ -1104,6 +1137,11 @@ Syntax:- systemctl [command] [service] <br>
 
     Example - echo hii! > tests.txt
 
+![Screenshot (428)](https://github.com/user-attachments/assets/873f2003-8b63-4797-a721-517635b3b501)
+
+![Screenshot (429)](https://github.com/user-attachments/assets/35bd3332-a986-4925-94e8-9f747515a5c1)
+
+![Screenshot (430)](https://github.com/user-attachments/assets/bfe10f29-4d65-44e1-afda-0247aa7a5604)
 
 
 ### bc
@@ -1120,6 +1158,7 @@ Syntax:- systemctl [command] [service] <br>
         8 % 3 (give you remainder of given expression)
         2
 
+![Screenshot (431)](https://github.com/user-attachments/assets/624cec76-f207-4211-9033-61c9316f7eb1)
 
 ### info echo
     Description - It reads documentation in the info format. It will give detailed information for a command when compared 

@@ -18,7 +18,9 @@
     v - Verbose (prompt shows what is being done)
     f - forcefully 
     t - sort by time
-        
+![Screenshot (437)](https://github.com/user-attachments/assets/82b5f554-69fb-4b42-a4d5-9ad92e2610e1)
+
+
 > [!NOTE]
 > **Flags** are used to modify the behavior of a command. For example ls -a, -a tells the ls executable to list all files in the directoy, including hidden ones. Flags are also called **OPTIONS**.
  

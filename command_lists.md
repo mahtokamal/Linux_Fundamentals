@@ -30,12 +30,16 @@
      Example:- cd Desktop/, cd, cd ..
      Output: goes to Desktop directory or folder.
  
+ ![Screenshot (438)](https://github.com/user-attachments/assets/fb9550fc-0c9a-496d-8920-bac502521711)
+
 ### dir
      Description:- list directory contents
      
      Example:- dir
      Output:- Desktop  Documents  Downloads  Music  Pictures	Public	snap  Templates  Videos
  
+ ![Screenshot (439)](https://github.com/user-attachments/assets/eef216c8-b802-47b0-b7b7-f0ff0bf42071)
+
 ### pwd
      Description:- print name of current/working directory
      

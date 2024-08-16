@@ -46,6 +46,8 @@
      Example:- pwd
      Output:- /home/kamal/Desktop
  
+ ![Screenshot (440)](https://github.com/user-attachments/assets/872f0209-553b-4bf6-bf2a-a8715219502a)
+
 ### mkdir
      Description:- make directories
      

@@ -53,13 +53,17 @@
      
      Example:- mkdir examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents  examples   Pictures  snap    Videos
- 
+
+![Screenshot (441)](https://github.com/user-attachments/assets/cb7c1ed6-ac90-433f-8d0a-71ba22416319)
+
  ### rmdir
      Description:- remove empty directories
      
      Example:- rmdir examples/ or rm -d examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
+ ![Screenshot (442)](https://github.com/user-attachments/assets/a7c308ae-9f1a-459f-bd38-0e0c60bec9f4)
+
  ### rm
      Description:- remove files or directories
      

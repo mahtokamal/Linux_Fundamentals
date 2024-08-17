@@ -62,7 +62,9 @@
      Example:- rmdir examples/ or rm -d examples/
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
- ![Screenshot (442)](https://github.com/user-attachments/assets/a7c308ae-9f1a-459f-bd38-0e0c60bec9f4)
+![Screenshot (442)](https://github.com/user-attachments/assets/a7c308ae-9f1a-459f-bd38-0e0c60bec9f4)
+
+![Screenshot (447)](https://github.com/user-attachments/assets/04adfa43-4d94-475e-825b-e50177c821e4)
 
  ### rm
      Description:- remove files or directories
@@ -70,11 +72,20 @@
      Example:- rmdir -iR examples/ or rm password.txt(removes file)
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
+![Screenshot (443)](https://github.com/user-attachments/assets/78812ba3-162c-43cd-9622-77dca15ee975)
+
+![Screenshot (443)](https://github.com/user-attachments/assets/3ef09bd6-e1e4-4823-8dfc-679a068e3b27)
+
+![Screenshot (446)](https://github.com/user-attachments/assets/f695ec34-174d-4ae2-8803-5fd9795a462e)
+
  ### cp
      Description:- copy files and directories
      
      Example:- cp password.txt security/ or cp -r kam/ kam2/ 
      Output:- 
+
+![Screenshot (444)](https://github.com/user-attachments/assets/8a0f5a74-450a-4612-b1e1-facedb137155)
+
 > [!NOTE]
 > Use flags such as -R -r(recursively copies files or folder inside the directory) while copying directories to another. 
      

@@ -84,6 +84,8 @@
 
 ![Screenshot (444)](https://github.com/user-attachments/assets/8a0f5a74-450a-4612-b1e1-facedb137155)
 
+![Screenshot (448)](https://github.com/user-attachments/assets/c72e7e09-d232-480a-bfbb-d88ff5c70cae)
+
 > [!NOTE]
 > Use flags such as -R -r(recursively copies files or folder inside the directory) while copying directories to another. 
      
@@ -94,7 +96,16 @@
      Example:- mv kam.txt k1.txt (renaming file kam.txt to k1.txt)
      Example:- mv kam/ kam2/ (renaming directory kam/ to kam2/)
      Example:- mv kam/ kam3/ (moving directory kam/ to kam3/)
-     Output:-  
+     Output:-
+![Screenshot (449)](https://github.com/user-attachments/assets/a1ef34c6-afe2-471f-b631-e5adb1fad9ed)
+
+![Screenshot (450)](https://github.com/user-attachments/assets/111a3f94-ef4e-40e7-a8d6-11fd430b9d73)
+
+![Screenshot (451)](https://github.com/user-attachments/assets/42f17fab-c8f8-48fe-b90d-0285236205a5)
+
+![Screenshot (452)](https://github.com/user-attachments/assets/6f0446b4-aeea-46e4-8cf3-6f67508be58e)
+
+
  ### touch
      Description:- change file timestamps (create files with empty contents)
      

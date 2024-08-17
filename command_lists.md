@@ -69,12 +69,10 @@
  ### rm
      Description:- remove files or directories
      
-     Example:- rmdir -iR examples/ or rm password.txt(removes file)
+     Example:- rm password.txt(removes file) or rm -ir(remove non-empty directories)
      Output:- Desktop    Downloads  Music     Public  Templates Documents Pictures  snap    Videos
  
 ![Screenshot (443)](https://github.com/user-attachments/assets/78812ba3-162c-43cd-9622-77dca15ee975)
-
-![Screenshot (443)](https://github.com/user-attachments/assets/3ef09bd6-e1e4-4823-8dfc-679a068e3b27)
 
 ![Screenshot (446)](https://github.com/user-attachments/assets/f695ec34-174d-4ae2-8803-5fd9795a462e)
 

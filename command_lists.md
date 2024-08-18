@@ -111,11 +111,17 @@
      
      Example:- touch hello.txt
      Output:- 
+
+ ![Screenshot (453)](https://github.com/user-attachments/assets/0659e2a1-c448-4751-90e9-32462c77b702)
+
  ### nano
      Description:- open files in nano text-editors
      
      Example:- nano hello.txt
      Output:- 
+
+![Screenshot (454)](https://github.com/user-attachments/assets/9cfeb347-3c58-46d9-b66e-631cb94d40ab)
+
  ### gedit
      Description:- open files in gedit text-editors
      

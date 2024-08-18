@@ -155,6 +155,8 @@
     Output:-  This is your right **time**.
               **time** and tide wait for none.
 
+![Screenshot (464)](https://github.com/user-attachments/assets/f0e57f65-f106-41ec-904c-cca4d5c08d37)
+
  ### uniq
      Description:- report or omit(filters-out) repeated lines in a file. Uniq helps to detect the adjacent duplicate lines 
      and also deletes the duplicate lines. 

@@ -127,12 +127,17 @@
      
      Example:- gedit hello.txt
      Output:- 
+
+![Screenshot (455)](https://github.com/user-attachments/assets/4cfe0abb-3c74-4141-9349-f5292a2243d2)
+
  ### cat
      Description:- concatenate files and print on the standard output (to view contents of file)
      
      Example:- cat hello.txt
      Output:-  This is your right time to
                follow your passion.
+
+![Screenshot (456)](https://github.com/user-attachments/assets/9f83a098-bb9c-47e8-a45d-327313b998b8)
 
  ### tac
      Description:- concatenate and print files in reverse 

@@ -146,6 +146,8 @@
      Output:-  follow your passion.
                This is your right time to
 
+![Screenshot (463)](https://github.com/user-attachments/assets/fbe147ca-65fb-4468-a63b-65ab6b78e7a3)
+
  ### grep
     Description:- print lines that match patterns
     

@@ -287,6 +287,9 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
     for((i=1;i<=1000;i++)); do echo $i >> thousands.txt;done (prints numbers from 1 - 100 and will be saved into 
     thousands.txt)
 
+![Screenshot (512)](https://github.com/user-attachments/assets/b24174c9-54be-4d50-afe9-0d30032828dd)
+![Screenshot (513)](https://github.com/user-attachments/assets/7d963aa4-80b8-49ff-875d-534a915b9715)
+
 > [!NOTE]
 > By default head print the first 10 lines of each FILE to standard output.
  
@@ -305,6 +308,9 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
               998
               999
               1000
+
+![Screenshot (514)](https://github.com/user-attachments/assets/cdde3734-6431-4b7c-bd69-f66449296a06)
+![Screenshot (515)](https://github.com/user-attachments/assets/8dd189ba-19ae-4107-acf9-32aaf4d4f2e3)
 
 > [!NOTE]
 > By default tail print the last 10 lines of each FILE to standard output.

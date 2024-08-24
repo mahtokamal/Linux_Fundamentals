@@ -322,18 +322,24 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
      Example:- find k?.txt ('?' represents exactly one character )
      Example:- find kam*.txt ('*' represents any number of character)
      Output:-
+![Screenshot (516)](https://github.com/user-attachments/assets/98774670-4983-457b-bb66-834153a963bd)
+![Screenshot (517)](https://github.com/user-attachments/assets/79032fb1-ece3-4041-8583-875676414621)
+![Screenshot (518)](https://github.com/user-attachments/assets/b111b03f-3ae0-47ce-b997-e8975f4f08ea)
 
  ### file
      Description:- determine file type
      
      Example:- file k1.txt
      Output:- k1.txt: ASCII text
+![Screenshot (519)](https://github.com/user-attachments/assets/c0130d22-6fa6-40d0-85d2-944fb2aef193)
 
  ### wc
     Description:- print newline, word, and byte counts for each file
     
     Example:- wc k1.txt
     Output:- 1  5 24 k1.txt (lines, words, characters)
+
+![Screenshot 51](https://github.com/user-attachments/assets/5b8632ef-8059-454b-b548-e429b8aeb0f4)
 > [!NOTE]
 > -c(bytes count),-m(characters count),-l(newlines count ),-L, -w(words count)
 

@@ -337,7 +337,7 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
     Description:- print newline, word, and byte counts for each file
     
     Example:- wc k1.txt
-    Output:- 1  5 24 k1.txt (lines, words, characters)
+    Output:- 2  9 48 k1.txt (lines, words, characters)
 
 ![Screenshot 51](https://github.com/user-attachments/assets/5b8632ef-8059-454b-b548-e429b8aeb0f4)
 > [!NOTE]

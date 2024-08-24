@@ -213,7 +213,7 @@
                Bihar
                Uttar Pradesh
 
-     Example:- 
+     Example:- diff a.txt b.txt
      Output:- 0a1
             > Tamil Nadu
             2,3c3
@@ -225,6 +225,10 @@
             < Jammu and Kashmir
             ---
             > Uttar Pradesh
+
+![Screenshot (510)](https://github.com/user-attachments/assets/0f4fd49f-e85c-4824-afac-a6783285262d)
+![Screenshot (511)](https://github.com/user-attachments/assets/6892f67c-846c-4682-a588-6c362173fd93)
+
 The first line of the diff output will contain:  
 - Line numbers corresponding to the first file,
 - A special symbol and
@@ -242,7 +246,8 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
      
  ### less
      Description:- opposite of more. Less command is a Linux utility that can be used to read the contents of a text file 
-     one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, 
+     one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete 
+     file, 
      but accesses it page by page. 
 
      For example, if it’s a large file and you are reading it using any text editor, then the complete file will be loaded 

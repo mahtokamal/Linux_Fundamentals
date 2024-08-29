@@ -345,9 +345,12 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
 
  ### zip
      Description:- package and compress (archive) files
+
+     Syntax :- zip [options] [file_name.zip] [files_names]
+     Syntax :- zip [file_name.zip] [file_name] [for creating zip file]
      
-     Example:- zip zipfile.zip k1.txt thousands.txt (it zips the files k1.txt and thousands.txt into zipfile.zip)
-     Output:-  adding: k1.txt (deflated 8%)
+     Example :- zip zipfile.zip k1.txt thousands.txt (it zips the files k1.txt and thousands.txt into zipfile.zip)
+     Output :-  adding: k1.txt (deflated 8%)
                adding: thousands.txt (deflated 53%)
 
 ![Screenshot (539)](https://github.com/user-attachments/assets/13b67e71-c6df-422f-8533-cc663fc9d797)
@@ -355,12 +358,15 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
  ### unzip
      Description:- list, test and extract compressed files in a ZIP archive
      
+     Syntax:- unzip [file_name.zip]
      Example:- unzip zipfile.zip (extraction of zipfile.zip)
      Output:-  Archive:  zipfile.zip
                inflating: k1.txt                  
                inflating: thousands.txt
+    
+    Syntax:- unzip [file_name] -d [path_to_destination_directory_with_name]
     Example:- unzip zipfile.zip -d ~/Desktop/extracted/ (extraction of zipfile.zip to destination folder)
-    Archive:  zipfile.zip
+    Archive:-  zipfile.zip
               inflating: /home/kamal/Desktop/extracted/k1.txt  
               inflating: /home/kamal/Desktop/extracted/thousands.txt
 

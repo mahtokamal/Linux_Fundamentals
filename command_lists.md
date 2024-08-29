@@ -364,7 +364,9 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
               inflating: /home/kamal/Desktop/extracted/k1.txt  
               inflating: /home/kamal/Desktop/extracted/thousands.txt
 
-![image](https://github.com/user-attachments/assets/42a815ac-b82c-465e-9f62-6042edd731ef)
+![Screenshot (540](https://github.com/user-attachments/assets/e5a2344d-bc01-48dc-9975-f99ab1b65599)
+![Screenshot (540)](https://github.com/user-attachments/assets/4c2d6b80-88d6-43d2-b5a5-aa6acdef75da)
+
 
  
  ### tar

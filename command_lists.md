@@ -350,6 +350,8 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
      Output:-  adding: k1.txt (deflated 8%)
                adding: thousands.txt (deflated 53%)
 
+![Screenshot (539)](https://github.com/user-attachments/assets/13b67e71-c6df-422f-8533-cc663fc9d797)
+
  ### unzip
      Description:- list, test and extract compressed files in a ZIP archive
      
@@ -361,6 +363,10 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
     Archive:  zipfile.zip
               inflating: /home/kamal/Desktop/extracted/k1.txt  
               inflating: /home/kamal/Desktop/extracted/thousands.txt
+
+![image](https://github.com/user-attachments/assets/42a815ac-b82c-465e-9f62-6042edd731ef)
+
+ 
  ### tar
 
 https://www.freecodecamp.org/news/how-to-compress-files-in-linux-with-tar-command/

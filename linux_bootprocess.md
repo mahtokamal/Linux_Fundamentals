@@ -46,14 +46,14 @@ UEFI introduced Secure Boot, a security feature that verifies the digital signat
 **BIOS vs UEFI**<br>
 - BIOS uses the Master Boot Record (MBR) method, while UEFI uses the GUID Partition Table (GPT) method.
 - UEFI is more flexible and supports larger storage capacities, modern hardware, and faster boot times compared to BIOS.
-- UEFI introduces Secure Boot, enhancing system security by verifying the authenticity of bootloader and OS components.
+- UEFI introduces **Secure Boot, enhancing system security by verifying the authenticity of bootloader and OS components**.
 
 ### 2. Bootloader stage
 In bootloader stage, after detecting boot device it finds the boot sector on storage device on which OS is avaible. It searches first-stage bootloader(primary) and the first stage(first-sector) bootloader, which is a part of the MBR, is a 512-byte image containing the vendor-specific program code and a partition table. The first stage bootloader will find and load the second stage(secondary) bootloader. It does this by searching in the partition table for an active partition. After finding an active partition, first stage bootloader will keep scanning the remaining partitions in the table to ensure that they're all inactive. After this step, the active partition's boot record is read into RAM and executed as the second stage bootloader. The job of the second stage bootloader is to load the Linux kernel image into memory, and optional initial RAM disk.
 
 **(GRUB2) GRUB** stands for **Grand Unified Boot Loader**. It's a widely used boot loader in the Linux world, responsible for managing the boot process of a computer.
 GRUB2 shows a menu where you can choose between different Linux kernels or even another operating system like Windows.
-A boot loader is a program that loads the operating system into the computer's memory during the startup process. GRUB is specifically designed for Unix-like operating systems, especially Linux.
+**A boot loader is a program that loads the operating system into the computer's memory during the startup process.** GRUB is specifically designed for Unix-like operating systems, especially Linux.
 When booting Linux, the boot loader(GRUB2) is responsible for loading the kernel image and the initial RAM disk or filesystem (which contains some critical files and device drivers needed to start the system) into memory(RAM).It also manages the initial RAM disk (initrd/initramfs) that assists the kernel during the boot process.
 
 GRUB uses a configuration file (grub.cfg or menu.lst) where users can define boot options, specify kernel parameters, and customize the appearance of the boot menu. This allows users to modify boot settings or add specific parameters for the operating system to use during startup.

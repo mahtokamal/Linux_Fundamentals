@@ -253,8 +253,20 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
      For example, if it’s a large file and you are reading it using any text editor, then the complete file will be loaded 
      to the main memory. The less command doesn’t load the entire file but loads it part by part which makes it faster. 
 
-     Example:- less [options/flags] filename
-     Example:- 
+     1. both forward and backward navigation and also has search options. You can go to the beginning and the end of a file instantly.
+     Plus you can switch to an editor (like open the file in vi or vim). It is noticeably quicker than editor for when the file is large.
+    
+     Syntax:- less [options/flags] filename
+     Example:- less hundreds.txt
+     Example:- less -p 0 hundreds.txt (p flag used for patterns i.e. highlights the text where 0 is available)
+
+![Screenshot (589)](https://github.com/user-attachments/assets/50ca08c6-e00d-4744-bdea-c0d7bc81c401)
+![Screenshot (590)](https://github.com/user-attachments/assets/38b396da-e589-421d-9155-70a4d3e8266c)
+![Screenshot (592)](https://github.com/user-attachments/assets/1b0dc430-cff0-4e1a-a572-e9774bd3ccbb)
+![Screenshot (593)](https://github.com/user-attachments/assets/0b02b6b9-3e27-45a0-9652-c4ac7ae7a2bc)
+![Screenshot (594)](https://github.com/user-attachments/assets/7e2db391-445f-4a52-8f83-7cc28b909839)
+![Screenshot (595)](https://github.com/user-attachments/assets/373246fd-89fc-4006-b9d6-d852a04ac2e8)
+
  
  ### more
      Description:- file perusal filter for crt viewing. more command is used to view the text files in the command prompt, 
@@ -263,9 +275,27 @@ Like in our case, 0a1 which means after lines 0(at the very beginning of file) y
      application of more is to use it with some other command after a pipe. When the output is large, we can use more 
      command to see output one by one.
 
+     1. forward navigation and limited backward navigation.
+
      
-     Example:- less [options/flags] filename
-     Example:- 
+     Syntax:- more [options/flags] filename
+     Example:- more -d hundreds.txt
+     (-d flag is 'Prompt Navigation Help')
+     Use this command in order to help the user to navigate.
+     It displays “[Press space to continue, ‘q’ to quit.]” and,
+     Displays “[Press ‘h’ for instructions.]” when wrong key is pressed.
+
+![Screenshot (585)](https://github.com/user-attachments/assets/03c18103-e022-4659-ad27-4746e373ba3a)
+![Screenshot (586)](https://github.com/user-attachments/assets/a3ef710f-fc56-4de8-ad60-3405f42beac8)
+![Screenshot (587)](https://github.com/user-attachments/assets/2f1be798-d7ca-4f12-8bd0-10132eb75589)
+![Screenshot (588)](https://github.com/user-attachments/assets/37dc2b74-1b49-41c3-8c79-14b1a89d5bcb)
+
+     
+
+### most
+    Description:- most has all the features of more and less but you can also open multiple files, close 1 file at a time when
+    you have multiple files open, allows locking and scrolling of the open windows and allows for splitting of open windows.
+
  
  ### head
      Description:- output the first part of files

@@ -419,9 +419,13 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 
  ### ifconfig
     Description:- configure a network interface
-    
-    Example:- ifconfig
-    Output:- 
+
+    Syntax - ifconfig [options] [interface] (interface can be 'eth0, wlan0')
+    Example - ifconfig [shows information on all network interfaces]
+    Output - 
+
+![Screenshot (620)](https://github.com/user-attachments/assets/4fb9eece-4f08-4082-ab3b-942366747aa4)
+
  
  ### route
     Description:- show / manipulate the IP routing table

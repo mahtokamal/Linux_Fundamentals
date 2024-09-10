@@ -430,12 +430,15 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
  ### route
     Description:- show / manipulate the IP routing table
     
-    Example:- route
+    Example:- route (It displays the IP/kernel routing table.)
     Output:- Kernel IP routing table
              Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
              default         192.168.124.2   0.0.0.0         UG    100    0        0 eth0
              192.168.124.0   0.0.0.0         255.255.255.0   U     100    0        0 eth0)
- 
+
+![Screenshot (621)](https://github.com/user-attachments/assets/0a8b7229-99ce-45dd-8d0b-821fdeb1075c)
+
+
  ### netstat
     Description:- Print network connections, routing tables, interface statis‐tics, masquerade connections, and multicast 
     memberships

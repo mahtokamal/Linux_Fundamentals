@@ -443,11 +443,12 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Description:- Print network connections, routing tables, interface statis‐tics, masquerade connections, and multicast 
     memberships
     
-    Example:- netstat
+    Syntax:- netstat [options]
     Example:- nestat -aut (all ports of TCP and UDP)
     Output:- Active Internet connections (servers and established)
              Proto Recv-Q Send-Q Local Address           Foreign Address         State      
              udp        0      0 192.168.124.128:bootpc  192.168.124.254:bootps  ESTABLISHED
+![Screenshot (625)](https://github.com/user-attachments/assets/8bf4e32e-5dd5-49a8-8302-5505baca50c0)
 
  
  ### whois
@@ -478,6 +479,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             Registrant Postal Code: REDACTED FOR PRIVACY
             Registrant Country: US
 
+![Screenshot (626)](https://github.com/user-attachments/assets/4befe18a-f192-4efe-815d-d7e7959f821b)
 
  
  ### ping

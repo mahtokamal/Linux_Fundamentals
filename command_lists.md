@@ -493,7 +493,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=4 ttl=128 time=51.0 ms
             64 bytes from muc11s22-in-f14.1e100.net (142.251.36.238): icmp_seq=5 ttl=128 time=50.2 ms
 
- 
+![Screenshot (635)](https://github.com/user-attachments/assets/7c6504d3-ca1d-4d5a-8080-c54136e2273c)
+![Screenshot (636)](https://github.com/user-attachments/assets/7eb0b11e-3ebb-4f50-bd7f-69598ef68077)
+
  ### dig
     Description:- DNS lookup utility. dig command stands for Domain Information Groper. It is used for retrieving 
     information about DNS name servers. It is basically used by network administrators. It is used for verifying and 

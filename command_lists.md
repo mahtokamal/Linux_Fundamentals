@@ -520,6 +520,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             ;; SERVER: 192.168.124.2#53(192.168.124.2) (UDP)
             ;; WHEN: Wed Jul 17 12:50:00 CEST 2024
             ;; MSG SIZE  rcvd: 62
+![Screenshot (637)](https://github.com/user-attachments/assets/aaa784b4-96cd-47f2-87c4-880498f6aef3)
 
  
  ### host

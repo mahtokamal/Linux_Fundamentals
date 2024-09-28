@@ -530,12 +530,16 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Output:- google.com has address 142.251.36.238
             google.com has IPv6 address 2a00:1450:4016:80a::200e
             google.com mail is handled by 10 smtp.google.com.
+![Screenshot (638)](https://github.com/user-attachments/assets/ae37d8ff-32d7-4290-8a03-d8edfd34deb1)
+
  
  ### hostname
     Description:- show or set the system's host name
     
     Example:- hostname
     Output:- Ubuntu
+
+![Screenshot (639)](https://github.com/user-attachments/assets/74446c37-f0f0-4cf9-aaca-1a1e8f87b79d)
 
 **--------------------------------------------------------------------------------------------------------------------**
 

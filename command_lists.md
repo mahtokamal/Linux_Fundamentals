@@ -549,6 +549,8 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     
     Example:- users
     Output:- kamal
+![Screenshot (640)](https://github.com/user-attachments/assets/f1800dda-6ce8-4368-917b-95beee1dfa40)
+
 
 ### useradd
     Description:- useradd - create a new user or update default new user information.

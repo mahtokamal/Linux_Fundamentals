@@ -566,6 +566,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Example:- sudo useradd sachin
     Output:- [sudo] password for kamal: 
 
+![Screenshot (643)](https://github.com/user-attachments/assets/08d5f321-a9a0-4552-bac7-d4403a7168eb)
+
+
 ### passwd
     Description:- change user password.
     
@@ -625,6 +628,10 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             gdm
             kamal
             sachin
+
+![Screenshot (644)](https://github.com/user-attachments/assets/e96b3a26-8030-4abf-b6e5-a740f2c384a2)
+![Screenshot (645)](https://github.com/user-attachments/assets/1a3eb427-8a6c-49b2-ae6e-246842caf3ea)
+![Screenshot (646)](https://github.com/user-attachments/assets/659cd8c7-6435-482b-aff3-422d1544b151)
 
 
 ### userdel

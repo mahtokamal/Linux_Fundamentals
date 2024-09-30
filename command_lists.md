@@ -702,6 +702,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Example:- sudo cat /etc/passwd | grep sachin
     Output:- sachin:x:1001:1001:This is a comment examples of a usermode for sachin user:/home/sachin:/bin/sh
 
+![Screenshot (647)](https://github.com/user-attachments/assets/7390205d-aa37-498e-a156-9b7a733ad68c)
+
+
 > [!IMPORTANT]
 > The information of a user is stored in the following files:
 /etc/passwd, 

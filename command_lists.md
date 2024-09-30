@@ -554,6 +554,14 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 
 ### useradd
     Description:- useradd - create a new user or update default new user information.
+
+    It makes changes to the following files:
+
+    /etc/passwd
+    /etc/shadow
+    /etc/group
+    /etc/gshadow
+    creates a directory for new user in /home
     
     Example:- sudo useradd sachin
     Output:- [sudo] password for kamal: 
@@ -671,6 +679,10 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             hplip
             gdm
             kamal
+![Screenshot (641)](https://github.com/user-attachments/assets/4b7167ba-fab3-4d30-bad0-f3a60fb9405c)
+
+![Screenshot (642)](https://github.com/user-attachments/assets/9d29e215-87f5-4b95-a144-677732e24fdd)
+
 
 ### usermod
     Description:- modify a user account. usermod command or modify user is a command in Linux that is used to change the 

@@ -726,6 +726,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Example:- groups sachin
     Output:-  sachin : sachin
 
+![Screenshot (648)](https://github.com/user-attachments/assets/bd7e2f8d-db59-4f4f-a641-9eefecb96176)
+
+
 ### groupadd
     Description:- create a new group. A group is a collection of users with similar permissions or access levels. Groups 
     make it easier to manage and assign permissions to multiple users at once, enhancing security and simplifying 
@@ -745,6 +748,7 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             sambashare:x:136:kamal
             sachin:x:1001:
             cybersecurity:x:1002: 
+![Screenshot (649)](https://github.com/user-attachments/assets/8cf5e480-9681-4ab0-baf3-eaf9e039c5df)
 
 ### groupdel
     Description:- delete a group.
@@ -764,6 +768,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             sambashare:x:136:kamal
             sachin:x:1001:
 
+![Screenshot (651)](https://github.com/user-attachments/assets/0bb78a89-ce54-4910-bc3a-54d27a8ec091)
+
+
 ### groupmod
     Description:- modify a group definition on the system.
     
@@ -781,6 +788,9 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
             sambashare:x:136:kamal
             sachin:x:1001:
             cyberforensic:x:1002:
+
+![Screenshot (650)](https://github.com/user-attachments/assets/46cb9e3e-8c1a-45c9-8f11-0134762d7559)
+
 
 **--------------------------------------------------------------------------------------------------------------------**
 ## Permission & ownership

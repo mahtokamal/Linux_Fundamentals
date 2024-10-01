@@ -738,35 +738,17 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
     Output:- password for kamal: 
 
     Example:- sudo tail /etc/group
-    Output:- colord:x:130:
-            geoclue:x:131:
-            pulse:x:132:
-            pulse-access:x:133:
-            gdm:x:134:
-            lxd:x:135:kamal
-            kamal:x:1000:
-            sambashare:x:136:kamal
-            sachin:x:1001:
-            cybersecurity:x:1002: 
+    Output:-
 ![Screenshot (649)](https://github.com/user-attachments/assets/8cf5e480-9681-4ab0-baf3-eaf9e039c5df)
 
 ### groupdel
     Description:- delete a group.
     
-    Example:- sudo groupdel cybersecurity
+    Example:- sudo groupdel cyberforensic
     Output:- 
 
     Example:- sudo tail /etc/group
-    Output:- saned:x:129:
-            colord:x:130:
-            geoclue:x:131:
-            pulse:x:132:
-            pulse-access:x:133:
-            gdm:x:134:
-            lxd:x:135:kamal
-            kamal:x:1000:
-            sambashare:x:136:kamal
-            sachin:x:1001:
+    Output:-
 
 ![Screenshot (651)](https://github.com/user-attachments/assets/0bb78a89-ce54-4910-bc3a-54d27a8ec091)
 
@@ -774,20 +756,11 @@ https://www.linuxteck.com/linux-compression-and-archiving-command-cheat-sheet/
 ### groupmod
     Description:- modify a group definition on the system.
     
-    Example:- sudo groupmod -n cyberforensic cybersecurity
+    Example:- sudo groupmod -n socteam cybersecurity
     Output:- 
 
     Example:- sudo tail /etc/group
-    Output:-  colord:x:130:
-            geoclue:x:131:
-            pulse:x:132:
-            pulse-access:x:133:
-            gdm:x:134:
-            lxd:x:135:kamal
-            kamal:x:1000:
-            sambashare:x:136:kamal
-            sachin:x:1001:
-            cyberforensic:x:1002:
+    Output:- 
 
 ![Screenshot (650)](https://github.com/user-attachments/assets/46cb9e3e-8c1a-45c9-8f11-0134762d7559)
 

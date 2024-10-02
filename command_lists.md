@@ -894,6 +894,11 @@ Output:- -rw-rwxr-- 1 sachin sachin   27 Mar  9 07:32 t1.txt <br>
                5    ?        00:00:00 slub_flushwq
                6    ?        00:00:00 netns
 
+![Screenshot (652)](https://github.com/user-attachments/assets/c1a18c2d-f1f8-4b01-aca7-8dfa45f11a2c)
+
+![Screenshot (653)](https://github.com/user-attachments/assets/a5ef693d-8085-4dfb-bbb8-7f257ed2a3c4)
+
+
 
 
 Result contains four columns of information. Where, 

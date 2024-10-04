@@ -924,6 +924,9 @@ Result contains four columns of information. Where,
 Example:- top <br>
 Output:-  <br>
 
+![Screenshot (656)](https://github.com/user-attachments/assets/73818a1f-42b5-4fb3-a6bb-a671c01e505f)
+
+
 top - 05:01:19 up 14:05,  1 user,  load average: 0.30, 0.27, 0.30 <br>
 Tasks: 286 total,   1 running, 285 sleeping,   0 stopped,   0 zombie <br>
 %Cpu(s):  4.1 us,  1.9 sy,  0.0 ni, 93.7 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st <br>

@@ -949,6 +949,10 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  <br>
     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+  <br>
     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+  <br>
 
+![Screenshot (654)](https://github.com/user-attachments/assets/1580e0e8-b33a-41c0-817d-83accc43d3f3)
+
+![Screenshot (655)](https://github.com/user-attachments/assets/4b83e729-365f-4e5a-9af3-8cb6861a24eb)
+
 
 - PID: Shows task’s unique process id.
 - PR: The process’s priority. The lower the number, the higher the priority.

@@ -996,6 +996,9 @@ In the top command, you can kill a process using the k key followed by entering 
               75154 pts/0    00:00:00 bash
               76093 pts/0    00:00:00 ps
 
+![Screenshot (657)](https://github.com/user-attachments/assets/af1d9458-0bfd-4645-a8c0-d56aaba10f82)
+
+
 1. To check the nice value of a process. 
 Example:- ps -el | grep terminal
 Output:- 0 S  1000   77289    1540  1  80   0 - 140768 do_pol ?       00:00:05 gnome-terminal-

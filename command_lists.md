@@ -798,24 +798,24 @@ The following Reference that are used:
 Examples of Using the Symbolic mode: <br>
 Read, write and execute permissions to the file owner: <br>
 
-**Permissiion(before chmod) :-** rw-rw-r-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**Permissiion(before chmod) :-** rw-rw-r-- 1 kamal kamal 54 Aug  9 17:37 a.txt <br>
 **Ex:-** chmod u+rwx a.txt <br>
-**output:-** -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**output:-** -rwxrw-r-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 ![Screenshot (661)](https://github.com/user-attachments/assets/d42f6452-6027-4642-a628-0a39c1921e05)
 ![Screenshot (662)](https://github.com/user-attachments/assets/b7eaad6f-910e-4759-aa20-68a84db605a1)
 
 
 Remove write permission for the group and others: <br>
-**Permissiion(before chmod) :-** -rwxrw-r-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**Permissiion(before chmod) :-** -rwxrw-r-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 **Ex:-** chmod go-w a.txt <br>
-**output:-** -rwxr--r-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**output:-** -rwxr--r-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 ![Screenshot (663)](https://github.com/user-attachments/assets/26dd6698-747e-4767-a8ea-fdf50b4434e5)
 
 
 Read and write for Owner, and Read-only for the group and other: <br>
-**Permissiion(before chmod) :-** -rwxr--r-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**Permissiion(before chmod) :-** -rwxr--r-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 **Ex:-** chmod u+rw,go+r a.txt <br>
-**output:-** -rw-r--r-- 1  kamal kamal   27 Mar  9 07:32 a.txt <br>
+**output:-** -rwxr--r-- 1  kamal kamal   54 Aug  9 17:37 a.txt <br>
 ![Screenshot (664)](https://github.com/user-attachments/assets/56661716-63d5-4432-92ac-cb2fa5137579)
 
 
@@ -837,10 +837,10 @@ Read and write for Owner, and Read-only for the group and other: <br>
 - 7 represent permission of Group which are (rwx).
 - 4 represent permission of Other which is (r).
  
-**Permissiion(before chmod) :-** -r--r--r-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+**Permissiion(before chmod) :-** -r--r--r-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 
-  Example:-  chmod 674 t1.txt <br>
-  Output:-  -rw-rwxr-- 1 kamal kamal   27 Mar  9 07:32 t1.txt <br>
+  Example:-  chmod 674 a.txt <br>
+  Output:-  -rw-rwxr-- 1 kamal kamal  54 Aug  9 17:37 a.txt <br>
 ![Screenshot (665)](https://github.com/user-attachments/assets/b17d296c-d5fd-4d3a-9627-c77a3d7ebeaf)
 ![Screenshot (666)](https://github.com/user-attachments/assets/e21701d7-81ff-41ed-a357-39fea27af408)
 
@@ -859,12 +859,12 @@ Here’s a breakdown of the components: <br>
 - `new_owner[:new_group]`: The new owner and optionally the new group. If `new_group` is omitted, only the owner is changed.
 - `file(s)`: The file or files for which ownership is to be changed.
 
-**ownership(before chown) :-** -rw-rwxr-- 1 kamal kamal   27 Mar  9 07:32 a.txt <br>
+**ownership(before chown) :-** -rw-rwxr-- 1 kamal kamal   54 Aug  9 17:37 a.txt <br>
 
 To Change the owner of a file in Linux <br>
 Syntax:- chown owner_name  file_name <br>
 Example:- sudo chown sachin a.txt <br>
-Output:-  -rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 a.txt <br>
+Output:-  -rw-rwxr-- 1 sachin kamal   54 Aug  9 17:37 a.txt <br>
 
 ![Screenshot (665)](https://github.com/user-attachments/assets/82e12360-3cb5-4ad1-bace-1926f21a7967)
 ![Screenshot (667)](https://github.com/user-attachments/assets/fe8df4d0-7959-4f51-ac32-01837b202223)
@@ -872,13 +872,14 @@ Output:-  -rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 a.txt <br>
 To change the group ownership of a file <br>
 Syntax:- chown :group_name file_name <br>
 Example:- sudo chown :sachin b.txt<br>
-Output:-  -rw-rwxr-- 1  kamal  sachin 27 Mar  9 07:32 t1.txt <br>
+Output:-  -rw-rwxr-- 1  kamal  sachin 54 Aug  9 17:37 b.txt <br>
 
 ![Screenshot (668)](https://github.com/user-attachments/assets/b3e27cfd-5c14-447d-8a8d-31df7585c4f7)
 ![Screenshot (669)](https://github.com/user-attachments/assets/c6743ca2-6114-48f5-9f82-4a9efccec98b)
 
 to Change Owner and Group of the File simultaneously <br>
-Syntax:- chown master:group1 file1.txt
+Syntax:- chown owner_name:group_name file1.txt
+Example:- sudo chown sachin:sachin b.txt
 ![Screenshot (668)](https://github.com/user-attachments/assets/43f5cf85-68c2-41d5-a282-5663ad3ca4db)
 
 ![Screenshot (670)](https://github.com/user-attachments/assets/92f6e03f-bb79-4404-9dfa-ceafa5060ebc)
@@ -888,10 +889,10 @@ Syntax:- chown master:group1 file1.txt
     directory. All files in Linux belong to an owner and a group. You can set the owner by using “chown” command, and the 
     group by the “chgrp” command.
     
-**Group(before chgrp) :-**-rw-rwxr-- 1 sachin kamal   27 Mar  9 07:32 a.txt <br>
+**Group(before chgrp) :-**-rw-rwxr-- 1 sachin kamal   54 Aug  9 17:37 a.txt <br>
 
 Example:- sudo chgrp sachin a.txt
-Output:- -rw-rwxr-- 1 sachin sachin   27 Mar  9 07:32 a.txt <br>
+Output:- -rw-rwxr-- 1 sachin sachin  54 Aug  9 17:37 a.txtt <br>
 
 ![Screenshot (671)](https://github.com/user-attachments/assets/cb885fe2-a420-4198-ae4e-f432d013d11b)
 ![Screenshot (672)](https://github.com/user-attachments/assets/123c8fe9-91fa-407c-afc5-6deaec1fa82b)

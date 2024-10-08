@@ -878,8 +878,8 @@ Output:-  -rw-rwxr-- 1  kamal  sachin 54 Aug  9 17:37 b.txt <br>
 ![Screenshot (669)](https://github.com/user-attachments/assets/c6743ca2-6114-48f5-9f82-4a9efccec98b)
 
 to Change Owner and Group of the File simultaneously <br>
-Syntax:- chown owner_name:group_name file1.txt
-Example:- sudo chown sachin:sachin b.txt
+Syntax:- chown owner_name:group_name file1.txt <br>
+Example:- sudo chown sachin:sachin b.txt <br>
 ![Screenshot (668)](https://github.com/user-attachments/assets/43f5cf85-68c2-41d5-a282-5663ad3ca4db)
 
 ![Screenshot (670)](https://github.com/user-attachments/assets/92f6e03f-bb79-4404-9dfa-ceafa5060ebc)
@@ -891,7 +891,7 @@ Example:- sudo chown sachin:sachin b.txt
     
 **Group(before chgrp) :-**-rw-rwxr-- 1 sachin kamal   54 Aug  9 17:37 a.txt <br>
 
-Example:- sudo chgrp sachin a.txt
+Example:- sudo chgrp sachin a.txt <br>
 Output:- -rw-rwxr-- 1 sachin sachin  54 Aug  9 17:37 a.txtt <br>
 
 ![Screenshot (671)](https://github.com/user-attachments/assets/cb885fe2-a420-4198-ae4e-f432d013d11b)

@@ -1021,39 +1021,42 @@ In the top command, you can kill a process using the k key followed by entering 
 ![Screenshot (657)](https://github.com/user-attachments/assets/af1d9458-0bfd-4645-a8c0-d56aaba10f82)
 
 
-1. To check the nice value of a process. 
-Example:- ps -el | grep terminal
-Output:- 0 S  1000   77289    1540  1  80   0 - 140768 do_pol ?       00:00:05 gnome-terminal-
+1. To check the nice value of a process. <br>
+Example:- ps -el | grep terminal <br>
+Output:- 0 S  1000   77289    1540  1  80   0 - 140768 do_pol ?       00:00:05 gnome-terminal- <br>
 
-2. To set the priority of a process.
-Example:- nice -10 gnome-terminal
-Output:- 
+2. To set the priority of a process. <br>
+Example:- nice -10 gnome-terminal <br>
+Output:- <br>
 
-3. To set the negative priority for a process
-Example:- nice --10 gnome-terminal
-Output:-  
+3. To set the negative priority for a process <br>
+Example:- nice --10 gnome-terminal <br>
+Output:-  <br>
+![Screenshot (658)](https://github.com/user-attachments/assets/10684e37-0796-4d02-887c-5d04c5c345e9)
+![Screenshot (659)](https://github.com/user-attachments/assets/114de81d-ed53-41da-85a0-d393767372b3)
+![Screenshot (660)](https://github.com/user-attachments/assets/902aff66-b3b6-4b0f-bcd8-a8b8c1dc98d7)
 
 ### renice
     Description:- alter priority of running processes. renice command allows you to change and modify the scheduling 
     priority of an already running process.
 
-1. changing priority of the running process.
-   Example:- ps -el | grep terminal
-   Output:- 0 S  1000   77289    1540  1  80   0 - 140864 do_pol ?       00:00:19 gnome-terminal-
+1. changing priority of the running process. <br>
+   Example:- ps -el | grep terminal <br>
+   Output:- 0 S  1000   77289    1540  1  80   0 - 140864 do_pol ?       00:00:19 gnome-terminal- <br>
 
-   Example:- renice -n 15 -p 77289
-   Output:- 77289 (process ID) old priority 0, new priority 15
+   Example:- renice -n 15 -p 77289 <br>
+   Output:- 77289 (process ID) old priority 0, new priority 15 <br>
 
-   Example:- ps -el | grep terminal
-   Outpu:- 0 S  1000   77289    1540  1  95  15 - 140864 do_pol ?       00:00:20 gnome-terminal-
+   Example:- ps -el | grep terminal <br>
+   Outpu:- 0 S  1000   77289    1540  1  95  15 - 140864 do_pol ?       00:00:20 gnome-terminal- <br>
 
-2. To change the priority of all programs of a specific group.
-   Example:- sudo renice -n 10 -g 1
-   Output:- 1 (process group ID) old priority 15, new priority 10
+2. To change the priority of all programs of a specific group. <br>
+   Example:- sudo renice -n 10 -g 1 <br>
+   Output:- 1 (process group ID) old priority 15, new priority 10 <br>
 
-3. To change the priority of all programs of a specific user. 
-   Example:- sudo renice -n 10 -u 0
-   Output:- 0 (user ID) old priority -20, new priority 10
+3. To change the priority of all programs of a specific user. <br>
+   Example:- sudo renice -n 10 -u 0 <br>
+   Output:- 0 (user ID) old priority -20, new priority 10 <br>
 
 ### systemctl
     Description:- Control the systemd system and service manager.

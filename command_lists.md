@@ -993,7 +993,7 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  <br>
 
 
 **Kill a Process with top** <br>
-In the top command, you can kill a process using the k key followed by entering the PID (Process ID) of the process you want to terminate. Here’s how you can do it: <br>
+In the top command, you can kill a process using the "k" key followed by entering the PID (Process ID) of the process you want to terminate. Here’s how you can do it: <br>
 
 1. Start top by typing top in your terminal. 
 2. Locate the process you want to kill using the arrow keys to navigate through the process list.
@@ -1001,6 +1001,11 @@ In the top command, you can kill a process using the k key followed by entering 
 4. Press k on your keyboard.
 5. Enter the PID of the process you want to kill and press Enter.
 6. Confirm the action if prompted.
+
+![Screenshot (676)](https://github.com/user-attachments/assets/4325e141-a735-45cf-bb3a-42992098dcdc)
+![Screenshot (677)](https://github.com/user-attachments/assets/8fc6725c-69b1-4a42-b086-5498eeae1392)
+![Screenshot (678)](https://github.com/user-attachments/assets/4183b138-5285-4bce-b0af-cd12d1c858c0)
+
 
 ### kill
     Description:- send a signal to a process.

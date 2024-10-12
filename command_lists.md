@@ -1047,21 +1047,27 @@ Output:-  <br>
 
 1. changing priority of the running process. <br>
    Example:- ps -el | grep terminal <br>
-   Output:- 0 S  1000   77289    1540  1  80   0 - 140864 do_pol ?       00:00:19 gnome-terminal- <br>
-
-   Example:- renice -n 15 -p 77289 <br>
+   Output:- 0 S  1000    2626    1555  0  80   0 - 139132 do_pol ?       00:00:02 gnome-terminal- <br>
+   2626 (is a process id)
+    
+   Example:- renice -n 15 -p 2626 <br>
    Output:- 77289 (process ID) old priority 0, new priority 15 <br>
 
    Example:- ps -el | grep terminal <br>
-   Outpu:- 0 S  1000   77289    1540  1  95  15 - 140864 do_pol ?       00:00:20 gnome-terminal- <br>
+   Output:- 0 S  1000    2626    1555  0  95  15 - 139132 do_pol ?       00:00:03 gnome-terminal- <br>
+
+![Screenshot (679)](https://github.com/user-attachments/assets/b5cdcc69-c558-4c94-a5c6-bd402e513cbc)
+
 
 2. To change the priority of all programs of a specific group. <br>
    Example:- sudo renice -n 10 -g 1 <br>
    Output:- 1 (process group ID) old priority 15, new priority 10 <br>
+![Screenshot (680)](https://github.com/user-attachments/assets/5d6ffba8-2281-4bac-b74f-05763bb543ca)
 
 3. To change the priority of all programs of a specific user. <br>
    Example:- sudo renice -n 10 -u 0 <br>
    Output:- 0 (user ID) old priority -20, new priority 10 <br>
+![Screenshot (681)](https://github.com/user-attachments/assets/76919d9c-d90f-4f17-8063-a355be3b6d99)
 
 ### systemctl
     Description:- Control the systemd system and service manager.

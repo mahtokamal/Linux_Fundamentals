@@ -10,7 +10,7 @@ commands then he/she should have to install that command first.
 
 - https://www.freecodecamp.org/news/introduction-to-linux/
 - https://youtu.be/sWbUDq4S6Y8
-
+- https://www.freecodecamp.org/news/learn-linux-for-beginners-book-basic-to-advanced/
 
 
 **--------------------------------------------------------------------------------------------------------------------------**

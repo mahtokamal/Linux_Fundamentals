@@ -11,6 +11,9 @@ commands then he/she should have to install that command first.
 - https://www.freecodecamp.org/news/introduction-to-linux/
 - https://youtu.be/sWbUDq4S6Y8
 - https://www.freecodecamp.org/news/learn-linux-for-beginners-book-basic-to-advanced/
+- https://www.freecodecamp.org/news/red-hat-enterprise-linux-guide/
+- https://www.freecodecamp.org/news/free-linux-crash-course-with-labs/
+- https://www.freecodecamp.org/news/guide-to-rhel-linux-basics/
 
 
 **--------------------------------------------------------------------------------------------------------------------------**

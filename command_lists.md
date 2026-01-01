@@ -195,6 +195,12 @@
 ![Screenshot (509)](https://github.com/user-attachments/assets/c9b4c315-30ec-453c-878c-e5ceb2fd284e)
 > [!NOTE]
 > uniq isn’t able to detect the duplicate lines unless they are adjacent to each other. The content in the file must be therefore sorted before using uniq or you can simply use sort -u instead of uniq command.
+
+### cut
+     Description:- 
+     
+     Example:- 
+     Output:-
    
  ### diff
      Description:- compare files line by line
